@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7145lax5n3og"
-path="res://.godot/imported/Background(maybe).png-0133785b6c417f8299ae4327d2892162.ctex"
+uid="uid://de50q0c72gp2y"
+path="res://.godot/imported/Dog-Head-Portrait.png-56fef790136e629f8115f7d9ac0774f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Background(maybe).png"
-dest_files=["res://.godot/imported/Background(maybe).png-0133785b6c417f8299ae4327d2892162.ctex"]
+source_file="res://Scenes/Dog-Head-Portrait.png"
+dest_files=["res://.godot/imported/Dog-Head-Portrait.png-56fef790136e629f8115f7d9ac0774f8.ctex"]
 
 [params]
 
