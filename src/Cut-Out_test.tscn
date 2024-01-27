@@ -1,0 +1,145 @@
+[gd_scene load_steps=15 format=3 uid="uid://bpau6r7nfoysx"]
+
+[ext_resource type="Texture2D" uid="uid://0j6eht11p7c3" path="res://Cutouts/Cut-Out.png" id="1_71862"]
+[ext_resource type="Texture2D" uid="uid://bvgmq6k2cau3u" path="res://Cutouts/Man-MODIFIED.png" id="1_pntmt"]
+[ext_resource type="Texture2D" uid="uid://xw8oxartndxs" path="res://Cutouts/Tree-Dog.png" id="2_g4txc"]
+[ext_resource type="Texture2D" uid="uid://dvi4mdaw2f52k" path="res://Cutouts/Man-MODIFIED-Animation1.png" id="2_jk65b"]
+[ext_resource type="Texture2D" uid="uid://dvymvv0w4oktg" path="res://Cutouts/Tree-Dog-Animation1.png" id="3_7ubvk"]
+[ext_resource type="Texture2D" uid="uid://dlhj8oyt1unno" path="res://Cutouts/Tree-Dog-Animation2.png" id="4_gfnh6"]
+[ext_resource type="Texture2D" uid="uid://6u2r58oapg5y" path="res://Cutouts/Rope.png" id="4_sburi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ptsib"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pntmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jk65b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_rgv6g"]
+resource_name = "Man-falls"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-374, -111), Vector2(-374, 86), Vector2(-374, 385)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -2.49058, -3.67915, -2.49058]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3jtm5"]
+_data = {
+"Man-falls": SubResource("Animation_rgv6g")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwkk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g4txc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7ubvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gfnh6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_vlkqm"]
+script/source = "extends AnimatedSprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="Animation" id="Animation_twi0a"]
+resource_name = "new_animation"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-342, -54), Vector2(820, -54)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_un4sh"]
+_data = {
+"new_animation": SubResource("Animation_twi0a")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.95, 0.6)
+
+[node name="Cut-out" type="Sprite2D" parent="."]
+position = Vector2(3, 8)
+texture = ExtResource("1_71862")
+
+[node name="Man" type="AnimatedSprite2D" parent="."]
+position = Vector2(-374, -111)
+sprite_frames = SubResource("SpriteFrames_ptsib")
+autoplay = "default"
+frame_progress = 0.179741
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Man"]
+libraries = {
+"": SubResource("AnimationLibrary_3jtm5")
+}
+autoplay = "Man-falls"
+
+[node name="TreeDog" type="AnimatedSprite2D" parent="."]
+position = Vector2(-342, -54)
+sprite_frames = SubResource("SpriteFrames_cwkk0")
+autoplay = "default"
+script = SubResource("GDScript_vlkqm")
+
+[node name="Rope" type="Sprite2D" parent="TreeDog"]
+position = Vector2(13, 174)
+texture = ExtResource("4_sburi")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TreeDog"]
+libraries = {
+"": SubResource("AnimationLibrary_un4sh")
+}
+autoplay = "new_animation"
