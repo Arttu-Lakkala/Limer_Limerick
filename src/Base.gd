@@ -42,11 +42,12 @@ func _ready():
 
 
 func _create_options ():
-	var options =lines[solved+5].split(",")
+	var options =Array(lines[solved+5].split(","))
 	var active_spot = get_node("spot" +str(solved))
 	active_spot.get_node("CollisionShape2D").set_disabled(false)
 	active_spot.answer = options[0]
 	active_spot.active = true
+	options.shuffle()
 	var counter = 0
 	for i in options:
 		var new_text = text_drag.instantiate()
