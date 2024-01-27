@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxi4c402ys0q"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_ttwur"]
+[ext_resource type="Texture2D" uid="uid://bjxm34i27ifjw" path="res://Scenes/StartScreen.png" id="2_yrg63"]
+[ext_resource type="Texture2D" uid="uid://de50q0c72gp2y" path="res://Scenes/Dog-Head-Portrait.png" id="3_8diyf"]
+[ext_resource type="Texture2D" uid="uid://xqfkuccsvpk3" path="res://Scenes/Man-Head-Portrait.png" id="4_y5lw0"]
+[ext_resource type="FontFile" uid="uid://dmiv5tp8fxrq3" path="res://fonts/mael/Mael.ttf" id="5_7hevn"]
+[ext_resource type="FontFile" uid="uid://b8ilcd8whjgnq" path="res://fonts/roboto/Roboto-Medium.ttf" id="6_i125c"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ttwur")
+
+[node name="StartScreen" type="Sprite2D" parent="."]
+position = Vector2(590, 430)
+texture = ExtResource("2_yrg63")
+
+[node name="Limer" type="Sprite2D" parent="StartScreen"]
+position = Vector2(-480, -256)
+scale = Vector2(1.51961, 1.62941)
+texture = ExtResource("3_8diyf")
+
+[node name="Jean" type="Sprite2D" parent="StartScreen"]
+position = Vector2(480, -256)
+scale = Vector2(1.46569, 1.61471)
+texture = ExtResource("4_y5lw0")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 105.0
+offset_right = 958.0
+offset_bottom = 316.0
+theme_override_colors/font_color = Color(0.0862745, 0.0862745, 0.0862745, 1)
+theme_override_fonts/font = ExtResource("5_7hevn")
+theme_override_font_sizes/font_size = 120
+text = "Limer
+Limerick"
+horizontal_alignment = 1
+
+[node name="Credits text" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -346.0
+offset_top = -475.0
+offset_right = 346.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_i125c")
+theme_override_font_sizes/font_size = 30
+text = "Made during Global Game Jam 2024
+
+Coding: Arttu Lakala
+Graphics: Benjamin Puha
+Audio: Krista Kanerva
+Writing and narrative: Nevena Sicevic
+
+Thank you for playing!"
+horizontal_alignment = 1
