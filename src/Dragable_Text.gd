@@ -40,14 +40,12 @@ func _process(_delta):
 
 func _on_area_2d_mouse_entered():
 	if not global.is_draging:
-		print_debug(Engine.get_frames_per_second()) 
 		active = true
 		#Might neeed to be mor complcated
 		scale = Vector2(1.05, 1.05)
 
 func _on_area_2d_mouse_exited():
 	if not global.is_draging:
-		print_debug("Engine.get_frames_per_second(AAAA") 
 		active = false
 		#Might neeed to be mor complcated
 		scale = Vector2(1.00, 1.00)
@@ -64,10 +62,12 @@ func _on_area_2d_body_exited(body):
 		body_ref = body
 
 func _check_answer(answer):
-	print_debug(answer)
+	
 	if (answer == option):
-		correct_answer.emit()
+		print_debug("YAY")
+		correct_answer.emit(answer)
 	else:
+		print_debug("BOO")
 		wrong_answer.emit()
 		
 		

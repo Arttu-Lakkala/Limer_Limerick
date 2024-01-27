@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://catpcugp6qf5g"]
+[gd_scene load_steps=4 format=3 uid="uid://catpcugp6qf5g"]
 
 [ext_resource type="Script" path="res://Base.gd" id="1_fs8d8"]
-[ext_resource type="PackedScene" uid="uid://bhugafu22k36w" path="res://Dragable_Text.tscn" id="2_idvlj"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_niimi"]
 
@@ -68,7 +67,3 @@ offset_right = 308.0
 offset_bottom = 163.0
 text = "sadsadsad"
 metadata/_edit_use_anchors_ = true
-
-[node name="Node2D" parent="." instance=ExtResource("2_idvlj")]
-position = Vector2(313, 245)
-scale = Vector2(1, 1)
