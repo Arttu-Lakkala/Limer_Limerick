@@ -1,6 +1,6 @@
-[gd_scene load_steps=50 format=3 uid="uid://bpau6r7nfoysx"]
+[gd_scene load_steps=56 format=3 uid="uid://bpau6r7nfoysx"]
 
-[ext_resource type="Texture2D" uid="uid://rquolt8j7b6v" path="res://Scenes/Background(maybe).png" id="1_6iqxs"]
+[ext_resource type="Texture2D" uid="uid://bkcv4qryog3lk" path="res://Scenes/Background(maybe).png" id="1_6iqxs"]
 [ext_resource type="Script" path="res://Cut-Out_test.gd" id="1_12q80"]
 [ext_resource type="Texture2D" uid="uid://0j6eht11p7c3" path="res://Scenes/Cut-Out.png" id="1_71862"]
 [ext_resource type="Texture2D" uid="uid://bvgmq6k2cau3u" path="res://Scenes/Man-MODIFIED.png" id="1_pntmt"]
@@ -12,7 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://d3fybbyrnxsay" path="res://Scenes/Man-MODIFIED-Idle.png" id="4_bps3f"]
 [ext_resource type="Texture2D" uid="uid://dlhj8oyt1unno" path="res://Scenes/Tree-Dog-Animation2.png" id="4_gfnh6"]
 [ext_resource type="Texture2D" uid="uid://6u2r58oapg5y" path="res://Scenes/Rope.png" id="4_sburi"]
+[ext_resource type="Texture2D" uid="uid://d2xmldgcf6rwl" path="res://Scenes/Man-MODIFIED-Idle2.png" id="9_5u0ea"]
 [ext_resource type="Texture2D" uid="uid://dvpcruhcx8uo2" path="res://Scenes/Exploding Tree/Tree-Bottom.png" id="11_djxx4"]
+[ext_resource type="Texture2D" uid="uid://sycv61w4k0dp" path="res://Scenes/Tree-Dog-Idle2.png" id="11_o554v"]
 [ext_resource type="Texture2D" uid="uid://qc7rchniu5ps" path="res://Scenes/Exploding Tree/Dog-Modified.png" id="11_s5kve"]
 [ext_resource type="Texture2D" uid="uid://dcnwj4f6abbuj" path="res://Scenes/Exploding Tree/Dog-Modified-Animation1.png" id="12_cptta"]
 [ext_resource type="Texture2D" uid="uid://bwverx1oubcai" path="res://Scenes/Exploding Tree/Tree-Top-Left.png" id="12_rte3o"]
@@ -50,19 +52,52 @@ animations = [{
 "texture": ExtResource("1_pntmt")
 }, {
 "duration": 1.0,
+"texture": ExtResource("4_bps3f")
+}, {
+"duration": 1.0,
 "texture": ExtResource("1_pntmt")
 }, {
 "duration": 1.0,
+"texture": ExtResource("4_bps3f")
+}, {
+"duration": 1.0,
 "texture": ExtResource("1_pntmt")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_bps3f")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_bps3f")
+"texture": ExtResource("1_pntmt")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_bps3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_pntmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bps3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_pntmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bps3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_pntmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bps3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5u0ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5u0ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5u0ea")
 }],
 "loop": true,
 "name": &"default",
@@ -76,19 +111,13 @@ animations = [{
 "texture": ExtResource("2_g4txc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_g4txc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_g4txc")
-}, {
-"duration": 1.0,
 "texture": ExtResource("3_u1dva")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_u1dva")
+"texture": ExtResource("11_o554v")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_u1dva")
+"texture": ExtResource("11_o554v")
 }],
 "loop": true,
 "name": &"default",
@@ -105,7 +134,24 @@ animations = [{
 "texture": ExtResource("2_jk65b")
 }],
 "loop": true,
-"name": &"Falling",
+"name": &"Fall",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwkk0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u1dva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7ubvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gfnh6")
+}],
+"loop": true,
+"name": &"Run",
 "speed": 5.0
 }]
 
@@ -141,23 +187,6 @@ tracks/1/keys = {
 _data = {
 "Man-falls": SubResource("Animation_rgv6g")
 }
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_cwkk0"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_u1dva")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_7ubvk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_gfnh6")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="Animation" id="Animation_twi0a"]
 resource_name = "new_animation"
@@ -286,19 +315,19 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("FallingMan2:position")
+tracks/4/path = NodePath("../FallingMan2:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 2.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(45, -182), Vector2(45, 308)]
+"values": [Vector2(-375, -110), Vector2(45, 308)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("FallingMan2:rotation")
+tracks/5/path = NodePath("../FallingMan2:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -311,6 +340,94 @@ tracks/5/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4i27m"]
 _data = {
 "Exploding Tree": SubResource("Animation_mutgj")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rlcjy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pntmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jk65b")
+}],
+"loop": true,
+"name": &"Fall3",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_17cjn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_s5kve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vc85h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cptta")
+}],
+"loop": true,
+"name": &"Climb",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_p2snq"]
+resource_name = "ClimbingUp"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ClimbingDog:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.7, 3, 4.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-24, 329), Vector2(-194, 329), Vector2(-184, 329), Vector2(-194, -137), Vector2(557, -614)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FallingMan3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.4, 2.8, 3.4, 3.7, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-32, -44), Vector2(-32, -44), Vector2(144, -61), Vector2(402, -17), Vector2(492, 30), Vector2(733, 217)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ClimbingDog:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8, 3, 3.5, 4.3, 5.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.523599, -1.5708, 0.261799, 3.14159, -1.0472]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FallingMan3:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.4, 2.9, 3.2, 3.5, 3.8, 4.1, 4.3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.523599, -0.523599, 0.523599, -0.523599, 0.523599, -0.523599, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q5f3i"]
+_data = {
+"ClimbingUp": SubResource("Animation_p2snq")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_82nf5"]
@@ -338,7 +455,33 @@ animations = [{
 "texture": ExtResource("26_ucnr0")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Spring",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cjqic"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_weqjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_a14q7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gxx6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_cvb04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_vdbmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_cvb04")
+}],
+"loop": true,
+"name": &"SpringDog",
 "speed": 5.0
 }]
 
@@ -363,32 +506,6 @@ _data = {
 "Springy-Man": SubResource("Animation_d5rh7")
 }
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cjqic"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_weqjs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_a14q7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_gxx6h")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_cvb04")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_vdbmr")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_cvb04")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="Animation" id="Animation_4qklc"]
 resource_name = "Springy-Dog"
 length = 6.0
@@ -402,7 +519,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-366, 263), Vector2(1000, 263)]
+"values": [Vector2(-22, 331), Vector2(1700, 263)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_naa1m"]
@@ -416,6 +533,7 @@ script = ExtResource("1_12q80")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Background?" type="Sprite2D" parent="."]
+position = Vector2(3, 10)
 texture = ExtResource("1_6iqxs")
 
 [node name="Cut-out" type="Sprite2D" parent="."]
@@ -437,13 +555,12 @@ position = Vector2(-374, -111)
 sprite_frames = SubResource("SpriteFrames_a3hj6")
 autoplay = "default"
 
-[node name="IdleTreeDog" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(-343, -54)
+[node name="IdleTreeDog" type="AnimatedSprite2D" parent="IdleMan"]
+position = Vector2(31, 57)
 sprite_frames = SubResource("SpriteFrames_w6dq0")
 autoplay = "default"
 
-[node name="Rope" type="Sprite2D" parent="IdleTreeDog"]
+[node name="Rope" type="Sprite2D" parent="IdleMan/IdleTreeDog"]
 position = Vector2(13, 174)
 texture = ExtResource("4_sburi")
 
@@ -451,23 +568,26 @@ texture = ExtResource("4_sburi")
 visible = false
 position = Vector2(-374, -111)
 sprite_frames = SubResource("SpriteFrames_ptsib")
-animation = &"Falling"
+animation = &"Fall"
 
-[node name="FallingManAnimation" type="AnimationPlayer" parent="FallingMan"]
+[node name="TreeDog" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-342, -54)
+sprite_frames = SubResource("SpriteFrames_cwkk0")
+animation = &"Run"
+
+[node name="Rope" type="Sprite2D" parent="TreeDog"]
+position = Vector2(13, 174)
+texture = ExtResource("4_sburi")
+
+[node name="FallingManAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../FallingMan")
 libraries = {
 "": SubResource("AnimationLibrary_3jtm5")
 }
 
-[node name="RunningTreeDog" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(-342, -54)
-sprite_frames = SubResource("SpriteFrames_cwkk0")
-
-[node name="Rope" type="Sprite2D" parent="RunningTreeDog"]
-position = Vector2(13, 174)
-texture = ExtResource("4_sburi")
-
-[node name="TreeDogAnimation" type="AnimationPlayer" parent="RunningTreeDog"]
+[node name="TreeDogAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../TreeDog")
 libraries = {
 "": SubResource("AnimationLibrary_un4sh")
 }
@@ -478,7 +598,8 @@ position = Vector2(-369, 260)
 sprite_frames = SubResource("SpriteFrames_ahot2")
 animation = &"Running"
 
-[node name="FullDogAnimation" type="AnimationPlayer" parent="RunningDog"]
+[node name="FullDogAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../RunningDog")
 libraries = {
 "": SubResource("AnimationLibrary_he3gl")
 }
@@ -487,11 +608,6 @@ libraries = {
 visible = false
 position = Vector2(-420, 70)
 texture = ExtResource("11_djxx4")
-
-[node name="FallingMan2" type="AnimatedSprite2D" parent="Treebottom"]
-position = Vector2(45, -182)
-sprite_frames = SubResource("SpriteFrames_hh5t7")
-animation = &"Falling"
 
 [node name="Tree-Top-Left" type="Sprite2D" parent="Treebottom"]
 position = Vector2(-65, -336)
@@ -505,9 +621,41 @@ texture = ExtResource("13_75kxo")
 position = Vector2(90, 49)
 texture = ExtResource("14_3sfv0")
 
-[node name="FallingMan2Animation" type="AnimationPlayer" parent="Treebottom"]
+[node name="FallingMan2" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-375, -110)
+sprite_frames = SubResource("SpriteFrames_hh5t7")
+animation = &"Falling"
+
+[node name="FallingMan2Animation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Treebottom")
 libraries = {
 "": SubResource("AnimationLibrary_4i27m")
+}
+
+[node name="Tree" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-343, -67)
+texture = ExtResource("18_r0lbe")
+
+[node name="Rope" type="Sprite2D" parent="Tree"]
+position = Vector2(13, 185)
+texture = ExtResource("4_sburi")
+
+[node name="FallingMan3" type="AnimatedSprite2D" parent="Tree"]
+position = Vector2(-32, -44)
+sprite_frames = SubResource("SpriteFrames_rlcjy")
+animation = &"Fall3"
+
+[node name="ClimbingDog" type="AnimatedSprite2D" parent="Tree"]
+position = Vector2(-24, 329)
+sprite_frames = SubResource("SpriteFrames_17cjn")
+animation = &"Climb"
+
+[node name="ClimbingAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Tree")
+libraries = {
+"": SubResource("AnimationLibrary_q5f3i")
 }
 
 [node name="IntactTree" type="Sprite2D" parent="."]
@@ -519,24 +667,27 @@ texture = ExtResource("18_r0lbe")
 position = Vector2(14, 186)
 texture = ExtResource("4_sburi")
 
-[node name="SpringyMan" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(-377, -111)
+[node name="SpringyMan" type="AnimatedSprite2D" parent="IntactTree"]
+position = Vector2(-33, -43)
+rotation = 5.02655
 sprite_frames = SubResource("SpriteFrames_82nf5")
+animation = &"Spring"
 
-[node name="SpringyManAnimation" type="AnimationPlayer" parent="SpringyMan"]
+[node name="SpringyDog" type="AnimatedSprite2D" parent="IntactTree"]
+position = Vector2(-22, 331)
+sprite_frames = SubResource("SpriteFrames_cjqic")
+animation = &"SpringDog"
+autoplay = "SpringDog"
+
+[node name="SpringyManAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../IntactTree/SpringyMan")
 libraries = {
 "": SubResource("AnimationLibrary_7fwi5")
 }
 autoplay = "Springy-Man"
 
-[node name="SpringyDog" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(-366, 263)
-sprite_frames = SubResource("SpriteFrames_cjqic")
-autoplay = "default"
-
-[node name="SpringyDogAnimation" type="AnimationPlayer" parent="SpringyDog"]
+[node name="SpringyDogAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../IntactTree/SpringyDog")
 libraries = {
 "": SubResource("AnimationLibrary_naa1m")
 }
