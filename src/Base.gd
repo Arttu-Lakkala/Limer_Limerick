@@ -3,9 +3,14 @@ extends Node2D
 
 var spot = preload("res://Text_Spot.tscn")
 var text_drag = preload("res://Dragable_Text.tscn")
+#indicates amount of verses in poem
 var verse = 0
+#indicates amount of solved verses in poem
 var solved  = -1
 var lines
+var lines_n = 5
+#indicates last visible line of the poem
+var last_visible = 0
 	
 func _ready():
 	solved = -1
@@ -13,7 +18,7 @@ func _ready():
 	var file = FileAccess.open(limeric_file, FileAccess.READ)
 	var limeric = file.get_as_text()
 	lines = limeric.split("\n")
-	for i in 5:
+	for i in lines_n:
 		var line
 		line = find_child(("Line_" + str(i)))
 		line.text = lines[i]
@@ -25,12 +30,12 @@ func _ready():
 			add_child(new_spot)
 			new_spot.name = ("spot" +str(verse))
 			verse +=1
-			
+	solved +=1
 	_create_options()
+	_adjust_verse("null")
 
 
 func _create_options ():
-	solved +=1
 	if solved == verse:
 		#Win
 		pass
@@ -49,3 +54,17 @@ func _create_options ():
 			add_child(new_text)
 			counter +=1
 	
+func _adjust_verse(answer):
+	if(last_visible != 0):
+		lines[last_visible].replace("___",answer)
+	var hide = false
+	for i in lines_n:
+		var line = find_child(("Line_" + str(i)))
+		line.text = lines[i]
+		if hide:
+			line.visible = false
+		else:
+			line.visible = true
+		if line.text.contains("___"):
+			last_visible = i
+			hide = true
