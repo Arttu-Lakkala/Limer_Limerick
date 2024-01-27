@@ -3,16 +3,36 @@
 [ext_resource type="Script" path="res://Text_Spot.gd" id="1_n6fcr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r7q08"]
-size = Vector2(338, 102)
+size = Vector2(273, 27)
 
 [node name="TextSpot" type="StaticBody2D" groups=["Text_Spots"]]
+position = Vector2(0, -1)
 script = ExtResource("1_n6fcr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(136.5, 14.5)
 shape = SubResource("RectangleShape2D_r7q08")
+disabled = true
 
-[node name="TEMP_NOTE" type="ColorRect" parent="."]
-offset_left = -177.0
-offset_top = -52.0
-offset_right = 171.0
-offset_bottom = 50.0
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 259.68
+offset_top = 17.5309
+offset_right = 299.68
+offset_bottom = 57.5309
+rotation = -2.31066
+scale = Vector2(0.136443, 0.352278)
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 256.68
+offset_top = 13.5309
+offset_right = 296.68
+offset_bottom = 53.5309
+rotation = -0.745728
+scale = Vector2(0.104589, 0.351095)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 259.68
+offset_top = 11.5309
+offset_right = 282.68
+offset_bottom = 17.5309
+rotation = -0.00237636

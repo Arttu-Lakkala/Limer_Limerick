@@ -1,17 +1,74 @@
-[gd_scene load_steps=4 format=3 uid="uid://catpcugp6qf5g"]
+[gd_scene load_steps=5 format=3 uid="uid://catpcugp6qf5g"]
 
 [ext_resource type="Script" path="res://Base.gd" id="1_fs8d8"]
-[ext_resource type="PackedScene" uid="uid://df7qnui8jlc3o" path="res://Text_Spot.tscn" id="1_fxcgn"]
-[ext_resource type="PackedScene" uid="uid://bhugafu22k36w" path="res://Dragable_Text.tscn" id="2_ehxwr"]
+[ext_resource type="PackedScene" uid="uid://bhugafu22k36w" path="res://Dragable_Text.tscn" id="2_idvlj"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_niimi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pim3u"]
+bg_color = Color(0.823529, 0.705882, 0.54902, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="Text" type="Node2D"]
+position = Vector2(2, 1)
 script = ExtResource("1_fs8d8")
+limeric_file = "res://Limerick/Verse2.txt"
 
-[node name="DragableText" parent="." instance=ExtResource("1_fxcgn")]
-position = Vector2(266, 273)
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("CanvasItemMaterial_niimi")
+offset_top = 1.0
+offset_right = 324.0
+offset_bottom = 180.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pim3u")
 
-[node name="DragableText2" parent="." instance=ExtResource("1_fxcgn")]
-position = Vector2(670, 273)
+[node name="Line_0" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = 308.0
+offset_bottom = 43.0
+text = "sadsadsad"
+metadata/_edit_use_anchors_ = true
 
-[node name="Node2D" parent="." instance=ExtResource("2_ehxwr")]
-position = Vector2(425, 472)
+[node name="Line_1" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 43.0
+offset_right = 308.0
+offset_bottom = 73.0
+text = "sadsadsad"
+metadata/_edit_use_anchors_ = true
+
+[node name="Line_2" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 73.0
+offset_right = 308.0
+offset_bottom = 103.0
+text = "sadsadsad"
+metadata/_edit_use_anchors_ = true
+
+[node name="Line_3" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 103.0
+offset_right = 308.0
+offset_bottom = 133.0
+text = "sadsadsad"
+metadata/_edit_use_anchors_ = true
+
+[node name="Line_4" type="RichTextLabel" parent="Panel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 133.0
+offset_right = 308.0
+offset_bottom = 163.0
+text = "sadsadsad"
+metadata/_edit_use_anchors_ = true
+
+[node name="Node2D" parent="." instance=ExtResource("2_idvlj")]
+position = Vector2(313, 245)
+scale = Vector2(1, 1)
