@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xw8oxartndxs"
-path="res://.godot/imported/Tree-Dog.png-d8d9df7220ccec4698d2fa20cff7bd42.ctex"
+uid="uid://dvpcruhcx8uo2"
+path="res://.godot/imported/Tree-Bottom.png-07143f433a849e2331a9f2249e6f4b8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cutouts/Tree-Dog.png"
-dest_files=["res://.godot/imported/Tree-Dog.png-d8d9df7220ccec4698d2fa20cff7bd42.ctex"]
+source_file="res://Scenes/Exploding Tree/Tree-Bottom.png"
+dest_files=["res://.godot/imported/Tree-Bottom.png-07143f433a849e2331a9f2249e6f4b8c.ctex"]
 
 [params]
 

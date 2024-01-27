@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dph6afwdnnwry"
-path="res://.godot/imported/Man.png-e99a21507639c8f6cbd52f89bf8f30f7.ctex"
+uid="uid://f0hayd0gursc"
+path="res://.godot/imported/Tree-Dog-Idle.png-d2abb369c38f1aa6045dab0d366bd7fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cutouts/Man.png"
-dest_files=["res://.godot/imported/Man.png-e99a21507639c8f6cbd52f89bf8f30f7.ctex"]
+source_file="res://Scenes/Tree-Dog-Idle.png"
+dest_files=["res://.godot/imported/Tree-Dog-Idle.png-d2abb369c38f1aa6045dab0d366bd7fe.ctex"]
 
 [params]
 

@@ -1,12 +1,88 @@
-[gd_scene load_steps=15 format=3 uid="uid://bpau6r7nfoysx"]
+[gd_scene load_steps=34 format=3 uid="uid://bpau6r7nfoysx"]
 
-[ext_resource type="Texture2D" uid="uid://0j6eht11p7c3" path="res://Cutouts/Cut-Out.png" id="1_71862"]
-[ext_resource type="Texture2D" uid="uid://bvgmq6k2cau3u" path="res://Cutouts/Man-MODIFIED.png" id="1_pntmt"]
-[ext_resource type="Texture2D" uid="uid://xw8oxartndxs" path="res://Cutouts/Tree-Dog.png" id="2_g4txc"]
-[ext_resource type="Texture2D" uid="uid://dvi4mdaw2f52k" path="res://Cutouts/Man-MODIFIED-Animation1.png" id="2_jk65b"]
-[ext_resource type="Texture2D" uid="uid://dvymvv0w4oktg" path="res://Cutouts/Tree-Dog-Animation1.png" id="3_7ubvk"]
-[ext_resource type="Texture2D" uid="uid://dlhj8oyt1unno" path="res://Cutouts/Tree-Dog-Animation2.png" id="4_gfnh6"]
-[ext_resource type="Texture2D" uid="uid://6u2r58oapg5y" path="res://Cutouts/Rope.png" id="4_sburi"]
+[ext_resource type="Texture2D" uid="uid://0j6eht11p7c3" path="res://Scenes/Cut-Out.png" id="1_71862"]
+[ext_resource type="Texture2D" uid="uid://bvgmq6k2cau3u" path="res://Scenes/Man-MODIFIED.png" id="1_pntmt"]
+[ext_resource type="Texture2D" uid="uid://xw8oxartndxs" path="res://Scenes/Tree-Dog.png" id="2_g4txc"]
+[ext_resource type="Texture2D" uid="uid://dvi4mdaw2f52k" path="res://Scenes/Man-MODIFIED-Animation1.png" id="2_jk65b"]
+[ext_resource type="Texture2D" uid="uid://dvymvv0w4oktg" path="res://Scenes/Tree-Dog-Animation1.png" id="3_7ubvk"]
+[ext_resource type="Texture2D" uid="uid://bw2lwyhpipkwb" path="res://Scenes/Tree-Dog-Talk.png" id="3_oh3nm"]
+[ext_resource type="Texture2D" uid="uid://f0hayd0gursc" path="res://Scenes/Tree-Dog-Idle.png" id="3_u1dva"]
+[ext_resource type="Texture2D" uid="uid://d3fybbyrnxsay" path="res://Scenes/Man-MODIFIED-Idle.png" id="4_bps3f"]
+[ext_resource type="Texture2D" uid="uid://dlhj8oyt1unno" path="res://Scenes/Tree-Dog-Animation2.png" id="4_gfnh6"]
+[ext_resource type="Texture2D" uid="uid://6u2r58oapg5y" path="res://Scenes/Rope.png" id="4_sburi"]
+[ext_resource type="Texture2D" uid="uid://dvpcruhcx8uo2" path="res://Scenes/Exploding Tree/Tree-Bottom.png" id="11_djxx4"]
+[ext_resource type="Texture2D" uid="uid://qc7rchniu5ps" path="res://Scenes/Exploding Tree/Dog-Modified.png" id="11_s5kve"]
+[ext_resource type="Texture2D" uid="uid://dcnwj4f6abbuj" path="res://Scenes/Exploding Tree/Dog-Modified-Animation1.png" id="12_cptta"]
+[ext_resource type="Texture2D" uid="uid://bwverx1oubcai" path="res://Scenes/Exploding Tree/Tree-Top-Left.png" id="12_rte3o"]
+[ext_resource type="Texture2D" uid="uid://d1d4xxqovchnj" path="res://Scenes/Exploding Tree/Tree-Top-Right.png" id="13_75kxo"]
+[ext_resource type="Texture2D" uid="uid://s4g840lnjrn2" path="res://Scenes/Exploding Tree/Dog-Modified-Animation2.png" id="13_vc85h"]
+[ext_resource type="Texture2D" uid="uid://dfjihopgew5vg" path="res://Scenes/Exploding Tree/Rope.png" id="14_3sfv0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r3cej"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_u1dva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oh3nm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6dq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g4txc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g4txc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g4txc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u1dva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u1dva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u1dva")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a3hj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pntmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_pntmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_pntmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bps3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bps3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bps3f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ptsib"]
 animations = [{
@@ -18,7 +94,7 @@ animations = [{
 "texture": ExtResource("2_jk65b")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Falling",
 "speed": 5.0
 }]
 
@@ -59,7 +135,7 @@ _data = {
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_g4txc")
+"texture": ExtResource("3_u1dva")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_7ubvk")
@@ -107,6 +183,139 @@ _data = {
 "new_animation": SubResource("Animation_twi0a")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ahot2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_s5kve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cptta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vc85h")
+}],
+"loop": true,
+"name": &"Running",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_chijg"]
+resource_name = "RunningDogFull"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-369, 260), Vector2(820, 260)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_he3gl"]
+_data = {
+"RunningDogFull": SubResource("Animation_chijg")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hh5t7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pntmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_jk65b")
+}],
+"loop": true,
+"name": &"Falling",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_mutgj"]
+resource_name = "Exploding Tree"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tree-Top-Left:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-65, -336), Vector2(-1068, -800)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tree-Top-Right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.9, 1.6, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(146, -331), Vector2(378, -422), Vector2(497, -358), Vector2(699, -197), Vector2(835.636, 176.091)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tree-Top-Left:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(-0.1, 0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -3.14159, -6.28319]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Tree-Top-Right:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 3.49066, 6.98132, 8.72665]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Falling-Man-From-Expl:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(45, -182), Vector2(45, 308)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Falling-Man-From-Expl:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -3.14159, -5.23599]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4i27m"]
+_data = {
+"Exploding Tree": SubResource("Animation_mutgj")
+}
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -116,30 +325,99 @@ zoom = Vector2(0.95, 0.6)
 position = Vector2(3, 8)
 texture = ExtResource("1_71862")
 
-[node name="Man" type="AnimatedSprite2D" parent="."]
+[node name="Talk-TreeDog" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-343, -54)
+sprite_frames = SubResource("SpriteFrames_r3cej")
+
+[node name="Rope" type="Sprite2D" parent="Talk-TreeDog"]
+position = Vector2(13, 174)
+texture = ExtResource("4_sburi")
+
+[node name="Idle-TreeDog" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-343, -54)
+sprite_frames = SubResource("SpriteFrames_w6dq0")
+autoplay = "default"
+
+[node name="Rope" type="Sprite2D" parent="Idle-TreeDog"]
+position = Vector2(13, 174)
+texture = ExtResource("4_sburi")
+
+[node name="Idle-Man" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-374, -111)
+sprite_frames = SubResource("SpriteFrames_a3hj6")
+autoplay = "default"
+
+[node name="Falling-Man" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(-374, -111)
 sprite_frames = SubResource("SpriteFrames_ptsib")
-autoplay = "default"
-frame_progress = 0.179741
+animation = &"Falling"
+autoplay = "Falling"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Man"]
+[node name="Falling Man" type="AnimationPlayer" parent="Falling-Man"]
 libraries = {
 "": SubResource("AnimationLibrary_3jtm5")
 }
 autoplay = "Man-falls"
 
-[node name="TreeDog" type="AnimatedSprite2D" parent="."]
-position = Vector2(-342, -54)
+[node name="Running-TreeDog" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(384.25, -54)
 sprite_frames = SubResource("SpriteFrames_cwkk0")
 autoplay = "default"
 script = SubResource("GDScript_vlkqm")
 
-[node name="Rope" type="Sprite2D" parent="TreeDog"]
+[node name="Rope" type="Sprite2D" parent="Running-TreeDog"]
 position = Vector2(13, 174)
 texture = ExtResource("4_sburi")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TreeDog"]
+[node name="Winning TreeDog" type="AnimationPlayer" parent="Running-TreeDog"]
 libraries = {
 "": SubResource("AnimationLibrary_un4sh")
 }
 autoplay = "new_animation"
+
+[node name="RunningDog" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-369, 260)
+sprite_frames = SubResource("SpriteFrames_ahot2")
+animation = &"Running"
+autoplay = "Running"
+
+[node name="Winning Full Dog" type="AnimationPlayer" parent="RunningDog"]
+libraries = {
+"": SubResource("AnimationLibrary_he3gl")
+}
+autoplay = "RunningDogFull"
+
+[node name="Tree-bottom" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-420, 70)
+texture = ExtResource("11_djxx4")
+
+[node name="Falling-Man-From-Expl" type="AnimatedSprite2D" parent="Tree-bottom"]
+position = Vector2(45, -182)
+sprite_frames = SubResource("SpriteFrames_hh5t7")
+animation = &"Falling"
+autoplay = "Falling"
+
+[node name="Tree-Top-Left" type="Sprite2D" parent="Tree-bottom"]
+position = Vector2(-65, -336)
+texture = ExtResource("12_rte3o")
+
+[node name="Tree-Top-Right" type="Sprite2D" parent="Tree-bottom"]
+position = Vector2(146, -331)
+texture = ExtResource("13_75kxo")
+
+[node name="Rope" type="Sprite2D" parent="Tree-bottom"]
+position = Vector2(90, 49)
+texture = ExtResource("14_3sfv0")
+
+[node name="Falling Exploding" type="AnimationPlayer" parent="Tree-bottom"]
+libraries = {
+"": SubResource("AnimationLibrary_4i27m")
+}
+autoplay = "Exploding Tree"

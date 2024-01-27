@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6u2r58oapg5y"
-path="res://.godot/imported/Rope.png-dc99a05da720168946f0376468a61d52.ctex"
+uid="uid://bvgmq6k2cau3u"
+path="res://.godot/imported/Man-MODIFIED.png-cc6fed13bf93157b702853a41c6bbed3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cutouts/Rope.png"
-dest_files=["res://.godot/imported/Rope.png-dc99a05da720168946f0376468a61d52.ctex"]
+source_file="res://Scenes/Man-MODIFIED.png"
+dest_files=["res://.godot/imported/Man-MODIFIED.png-cc6fed13bf93157b702853a41c6bbed3.ctex"]
 
 [params]
 
