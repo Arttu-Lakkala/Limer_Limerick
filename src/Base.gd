@@ -12,12 +12,13 @@ var lines_n = 5
 var texts = [Node]
 var spots = [Node]
 #indicates last visible line of the poem
-var last_visible = 0
+var last_visible
 	
 func _ready():
 	texts.clear()
 	spots.clear()
 	solved = -1
+	last_visible = 0
 	verse = 0
 	var file = FileAccess.open(limeric_file, FileAccess.READ)
 	var limeric = file.get_as_text()
@@ -87,8 +88,11 @@ func _next_verse(answer):
 	_adjust_verse(answer)
 	_destroy_options()
 	if solved == verse:
-		print_debug("JIPPIII")
+		_reset("res://Limerick/Verse4.txt")
 	else:
 		#Create new ones
 		_create_options()
 		
+func _reset(file):
+	limeric_file = file
+	_ready()

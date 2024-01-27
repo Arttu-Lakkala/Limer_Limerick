@@ -10,6 +10,8 @@ var start_position =Vector2 (0.0, 0.0)
 signal wrong_answer
 signal correct_answer
 # Called when the node enters the scene tree for the first time.
+	
+	
 func _set_Text(source):
 	get_node("Content").text = source
 	option = source
@@ -17,6 +19,7 @@ func _set_Text(source):
 func _set_spot(start):
 	start_position = start
 	position = start
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if active:
@@ -36,7 +39,7 @@ func _process(_delta):
 				_check_answer(body_ref.answer)
 			else:
 				var mover = get_tree().create_tween()
-				mover.tween_property(self, "global_position", start_position, 0.2).set_ease(Tween.EASE_OUT)
+				mover.tween_property(self, "position", start_position, 0.2).set_ease(Tween.EASE_OUT)
 
 func _on_area_2d_mouse_entered():
 	if not global.is_draging:

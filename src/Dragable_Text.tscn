@@ -20,7 +20,6 @@ corner_radius_bottom_right = 40
 corner_radius_bottom_left = 40
 
 [node name="Node2D" type="Node2D"]
-scale = Vector2(1.24498, 1.19946)
 script = ExtResource("1_q3j4t")
 
 [node name="Area2D" type="Area2D" parent="."]
