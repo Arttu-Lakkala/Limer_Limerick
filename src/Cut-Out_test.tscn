@@ -1,6 +1,7 @@
-[gd_scene load_steps=49 format=3 uid="uid://bpau6r7nfoysx"]
+[gd_scene load_steps=50 format=3 uid="uid://bpau6r7nfoysx"]
 
 [ext_resource type="Texture2D" uid="uid://rquolt8j7b6v" path="res://Scenes/Background(maybe).png" id="1_6iqxs"]
+[ext_resource type="Script" path="res://Cut-Out_test.gd" id="1_12q80"]
 [ext_resource type="Texture2D" uid="uid://0j6eht11p7c3" path="res://Scenes/Cut-Out.png" id="1_71862"]
 [ext_resource type="Texture2D" uid="uid://bvgmq6k2cau3u" path="res://Scenes/Man-MODIFIED.png" id="1_pntmt"]
 [ext_resource type="Texture2D" uid="uid://xw8oxartndxs" path="res://Scenes/Tree-Dog.png" id="2_g4txc"]
@@ -42,32 +43,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_w6dq0"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_g4txc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_g4txc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_g4txc")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_u1dva")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_u1dva")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_u1dva")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_a3hj6"]
 animations = [{
 "frames": [{
@@ -88,6 +63,32 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_bps3f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6dq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g4txc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g4txc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_g4txc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u1dva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u1dva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_u1dva")
 }],
 "loop": true,
 "name": &"default",
@@ -285,7 +286,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Falling-Man-From-Expl:position")
+tracks/4/path = NodePath("FallingMan2:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -297,7 +298,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Falling-Man-From-Expl:rotation")
+tracks/5/path = NodePath("FallingMan2:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -410,6 +411,7 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_12q80")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -420,128 +422,121 @@ texture = ExtResource("1_6iqxs")
 position = Vector2(3, 8)
 texture = ExtResource("1_71862")
 
-[node name="Talk-TreeDog" type="AnimatedSprite2D" parent="."]
+[node name="TalkTreeDog" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(-343, -54)
 sprite_frames = SubResource("SpriteFrames_r3cej")
 
-[node name="Rope" type="Sprite2D" parent="Talk-TreeDog"]
+[node name="Rope" type="Sprite2D" parent="TalkTreeDog"]
 position = Vector2(13, 174)
 texture = ExtResource("4_sburi")
 
-[node name="Idle-TreeDog" type="AnimatedSprite2D" parent="."]
+[node name="IdleMan" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-374, -111)
+sprite_frames = SubResource("SpriteFrames_a3hj6")
+autoplay = "default"
+
+[node name="IdleTreeDog" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(-343, -54)
 sprite_frames = SubResource("SpriteFrames_w6dq0")
 autoplay = "default"
 
-[node name="Rope" type="Sprite2D" parent="Idle-TreeDog"]
+[node name="Rope" type="Sprite2D" parent="IdleTreeDog"]
 position = Vector2(13, 174)
 texture = ExtResource("4_sburi")
 
-[node name="Idle-Man" type="AnimatedSprite2D" parent="."]
-position = Vector2(-374, -111)
-sprite_frames = SubResource("SpriteFrames_a3hj6")
-autoplay = "default"
-
-[node name="Falling-Man" type="AnimatedSprite2D" parent="."]
+[node name="FallingMan" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(-374, -111)
 sprite_frames = SubResource("SpriteFrames_ptsib")
 animation = &"Falling"
-autoplay = "Falling"
 
-[node name="Falling Man" type="AnimationPlayer" parent="Falling-Man"]
+[node name="FallingManAnimation" type="AnimationPlayer" parent="FallingMan"]
 libraries = {
 "": SubResource("AnimationLibrary_3jtm5")
 }
-autoplay = "Man-falls"
 
-[node name="Running-TreeDog" type="AnimatedSprite2D" parent="."]
+[node name="RunningTreeDog" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(-342, -54)
 sprite_frames = SubResource("SpriteFrames_cwkk0")
-autoplay = "default"
 
-[node name="Rope" type="Sprite2D" parent="Running-TreeDog"]
+[node name="Rope" type="Sprite2D" parent="RunningTreeDog"]
 position = Vector2(13, 174)
 texture = ExtResource("4_sburi")
 
-[node name="Winning TreeDog" type="AnimationPlayer" parent="Running-TreeDog"]
+[node name="TreeDogAnimation" type="AnimationPlayer" parent="RunningTreeDog"]
 libraries = {
 "": SubResource("AnimationLibrary_un4sh")
 }
-autoplay = "new_animation"
 
 [node name="RunningDog" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(-369, 260)
 sprite_frames = SubResource("SpriteFrames_ahot2")
 animation = &"Running"
-autoplay = "Running"
 
-[node name="Winning Full Dog" type="AnimationPlayer" parent="RunningDog"]
+[node name="FullDogAnimation" type="AnimationPlayer" parent="RunningDog"]
 libraries = {
 "": SubResource("AnimationLibrary_he3gl")
 }
-autoplay = "RunningDogFull"
 
-[node name="Tree-bottom" type="Sprite2D" parent="."]
+[node name="Treebottom" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(-420, 70)
 texture = ExtResource("11_djxx4")
 
-[node name="Falling-Man-From-Expl" type="AnimatedSprite2D" parent="Tree-bottom"]
+[node name="FallingMan2" type="AnimatedSprite2D" parent="Treebottom"]
 position = Vector2(45, -182)
 sprite_frames = SubResource("SpriteFrames_hh5t7")
 animation = &"Falling"
-autoplay = "Falling"
 
-[node name="Tree-Top-Left" type="Sprite2D" parent="Tree-bottom"]
+[node name="Tree-Top-Left" type="Sprite2D" parent="Treebottom"]
 position = Vector2(-65, -336)
 texture = ExtResource("12_rte3o")
 
-[node name="Tree-Top-Right" type="Sprite2D" parent="Tree-bottom"]
+[node name="Tree-Top-Right" type="Sprite2D" parent="Treebottom"]
 position = Vector2(146, -331)
 texture = ExtResource("13_75kxo")
 
-[node name="Rope" type="Sprite2D" parent="Tree-bottom"]
+[node name="Rope" type="Sprite2D" parent="Treebottom"]
 position = Vector2(90, 49)
 texture = ExtResource("14_3sfv0")
 
-[node name="Falling Exploding" type="AnimationPlayer" parent="Tree-bottom"]
+[node name="FallingMan2Animation" type="AnimationPlayer" parent="Treebottom"]
 libraries = {
 "": SubResource("AnimationLibrary_4i27m")
 }
-autoplay = "Exploding Tree"
 
-[node name="Intact-Tree" type="Sprite2D" parent="."]
+[node name="IntactTree" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-344, -68)
 texture = ExtResource("18_r0lbe")
 
-[node name="Rope" type="Sprite2D" parent="Intact-Tree"]
+[node name="Rope" type="Sprite2D" parent="IntactTree"]
 position = Vector2(14, 186)
 texture = ExtResource("4_sburi")
 
-[node name="Springy Man" type="AnimatedSprite2D" parent="."]
+[node name="SpringyMan" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(-377, -111)
 sprite_frames = SubResource("SpriteFrames_82nf5")
-autoplay = "default"
 
-[node name="Springy Man Falling?" type="AnimationPlayer" parent="Springy Man"]
+[node name="SpringyManAnimation" type="AnimationPlayer" parent="SpringyMan"]
 libraries = {
 "": SubResource("AnimationLibrary_7fwi5")
 }
 autoplay = "Springy-Man"
 
-[node name="Springy-Dog" type="AnimatedSprite2D" parent="."]
+[node name="SpringyDog" type="AnimatedSprite2D" parent="."]
 visible = false
 position = Vector2(-366, 263)
 sprite_frames = SubResource("SpriteFrames_cjqic")
 autoplay = "default"
 
-[node name="Winning Springy-Dog-and-Man" type="AnimationPlayer" parent="Springy-Dog"]
+[node name="SpringyDogAnimation" type="AnimationPlayer" parent="SpringyDog"]
 libraries = {
 "": SubResource("AnimationLibrary_naa1m")
 }
