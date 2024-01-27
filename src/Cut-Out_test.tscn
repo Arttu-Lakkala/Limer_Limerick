@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://bpau6r7nfoysx"]
+[gd_scene load_steps=50 format=3 uid="uid://bpau6r7nfoysx"]
 
+[ext_resource type="Texture2D" uid="uid://rquolt8j7b6v" path="res://Scenes/Background(maybe).png" id="1_6iqxs"]
 [ext_resource type="Texture2D" uid="uid://0j6eht11p7c3" path="res://Scenes/Cut-Out.png" id="1_71862"]
 [ext_resource type="Texture2D" uid="uid://bvgmq6k2cau3u" path="res://Scenes/Man-MODIFIED.png" id="1_pntmt"]
 [ext_resource type="Texture2D" uid="uid://xw8oxartndxs" path="res://Scenes/Tree-Dog.png" id="2_g4txc"]
@@ -17,6 +18,15 @@
 [ext_resource type="Texture2D" uid="uid://d1d4xxqovchnj" path="res://Scenes/Exploding Tree/Tree-Top-Right.png" id="13_75kxo"]
 [ext_resource type="Texture2D" uid="uid://s4g840lnjrn2" path="res://Scenes/Exploding Tree/Dog-Modified-Animation2.png" id="13_vc85h"]
 [ext_resource type="Texture2D" uid="uid://dfjihopgew5vg" path="res://Scenes/Exploding Tree/Rope.png" id="14_3sfv0"]
+[ext_resource type="Texture2D" uid="uid://7448ysuqyqqa" path="res://Scenes/Tree-No-Man-MODIFIED.png" id="18_r0lbe"]
+[ext_resource type="Texture2D" uid="uid://bckwaqblvdclm" path="res://Scenes/Springy Dog/Dog-CUT2.png" id="19_weqjs"]
+[ext_resource type="Texture2D" uid="uid://g08aotv5vqlm" path="res://Scenes/Springy Dog/Dog-CUT4.png" id="20_a14q7"]
+[ext_resource type="Texture2D" uid="uid://bcmtgobw84nua" path="res://Scenes/Springy Dog/Dog-CUT3.png" id="20_gxx6h"]
+[ext_resource type="Texture2D" uid="uid://bmfcxftdvv58f" path="res://Scenes/Springy Dog/Dog-CUT.png" id="21_cvb04"]
+[ext_resource type="Texture2D" uid="uid://ccvsghgmplrxc" path="res://Scenes/Springy Dog/Dog-CUT5.png" id="23_vdbmr"]
+[ext_resource type="Texture2D" uid="uid://burbw7ohst1ee" path="res://Scenes/Springy Dog/Man.png" id="24_p6jo5"]
+[ext_resource type="Texture2D" uid="uid://cc25h45j5uvj2" path="res://Scenes/Springy Dog/Man3.png" id="25_45hct"]
+[ext_resource type="Texture2D" uid="uid://b7y0hxwyw4cwr" path="res://Scenes/Springy Dog/Man2.png" id="26_ucnr0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r3cej"]
 animations = [{
@@ -316,10 +326,110 @@ _data = {
 "Exploding Tree": SubResource("Animation_mutgj")
 }
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_82nf5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_p6jo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_45hct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_45hct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_p6jo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_p6jo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ucnr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ucnr0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_d5rh7"]
+resource_name = "Springy-Man"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 10),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 6.28319, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7fwi5"]
+_data = {
+"Springy-Man": SubResource("Animation_d5rh7")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cjqic"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_weqjs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_a14q7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gxx6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_cvb04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_vdbmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_cvb04")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_4qklc"]
+resource_name = "Springy-Dog"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-366, 263), Vector2(1000, 263)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_naa1m"]
+_data = {
+"Springy-Dog": SubResource("Animation_4qklc")
+}
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.95, 0.6)
+
+[node name="Background?" type="Sprite2D" parent="."]
+texture = ExtResource("1_6iqxs")
 
 [node name="Cut-out" type="Sprite2D" parent="."]
 position = Vector2(3, 8)
@@ -345,7 +455,6 @@ position = Vector2(13, 174)
 texture = ExtResource("4_sburi")
 
 [node name="Idle-Man" type="AnimatedSprite2D" parent="."]
-visible = false
 position = Vector2(-374, -111)
 sprite_frames = SubResource("SpriteFrames_a3hj6")
 autoplay = "default"
@@ -421,3 +530,35 @@ libraries = {
 "": SubResource("AnimationLibrary_4i27m")
 }
 autoplay = "Exploding Tree"
+
+[node name="Intact-Tree" type="Sprite2D" parent="."]
+position = Vector2(-344, -68)
+texture = ExtResource("18_r0lbe")
+
+[node name="Rope" type="Sprite2D" parent="Intact-Tree"]
+position = Vector2(14, 186)
+texture = ExtResource("4_sburi")
+
+[node name="Springy Man" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-377, -111)
+sprite_frames = SubResource("SpriteFrames_82nf5")
+autoplay = "default"
+
+[node name="Springy Man Falling?" type="AnimationPlayer" parent="Springy Man"]
+libraries = {
+"": SubResource("AnimationLibrary_7fwi5")
+}
+autoplay = "Springy-Man"
+
+[node name="Springy-Dog" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(-366, 263)
+sprite_frames = SubResource("SpriteFrames_cjqic")
+autoplay = "default"
+
+[node name="Winning Springy-Dog-and-Man" type="AnimationPlayer" parent="Springy-Dog"]
+libraries = {
+"": SubResource("AnimationLibrary_naa1m")
+}
+autoplay = "Springy-Dog"
