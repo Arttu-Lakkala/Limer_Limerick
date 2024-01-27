@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bpau6r7nfoysx"]
+[gd_scene load_steps=49 format=3 uid="uid://bpau6r7nfoysx"]
 
 [ext_resource type="Texture2D" uid="uid://rquolt8j7b6v" path="res://Scenes/Background(maybe).png" id="1_6iqxs"]
 [ext_resource type="Texture2D" uid="uid://0j6eht11p7c3" path="res://Scenes/Cut-Out.png" id="1_71862"]
@@ -157,20 +157,6 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
-
-[sub_resource type="GDScript" id="GDScript_vlkqm"]
-script/source = "extends AnimatedSprite2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
 
 [sub_resource type="Animation" id="Animation_twi0a"]
 resource_name = "new_animation"
@@ -473,10 +459,9 @@ autoplay = "Man-falls"
 
 [node name="Running-TreeDog" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(384.25, -54)
+position = Vector2(-342, -54)
 sprite_frames = SubResource("SpriteFrames_cwkk0")
 autoplay = "default"
-script = SubResource("GDScript_vlkqm")
 
 [node name="Rope" type="Sprite2D" parent="Running-TreeDog"]
 position = Vector2(13, 174)
