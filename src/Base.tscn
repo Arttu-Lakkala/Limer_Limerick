@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://catpcugp6qf5g"]
+[gd_scene load_steps=4 format=3 uid="uid://catpcugp6qf5g"]
+
+[ext_resource type="Script" path="res://Base.gd" id="1_fs8d8"]
+[ext_resource type="PackedScene" uid="uid://df7qnui8jlc3o" path="res://Text_Spot.tscn" id="1_fxcgn"]
+[ext_resource type="PackedScene" uid="uid://bhugafu22k36w" path="res://Dragable_Text.tscn" id="2_ehxwr"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_fs8d8")
+
+[node name="DragableText" parent="." instance=ExtResource("1_fxcgn")]
+position = Vector2(266, 273)
+
+[node name="DragableText2" parent="." instance=ExtResource("1_fxcgn")]
+position = Vector2(670, 273)
+
+[node name="Node2D" parent="." instance=ExtResource("2_ehxwr")]
+position = Vector2(425, 472)
