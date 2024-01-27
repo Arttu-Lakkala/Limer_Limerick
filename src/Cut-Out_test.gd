@@ -17,6 +17,7 @@ func _ready():
 	#Here starts the second animation.
 	$Treebottom.visible = true
 	$RunningDog.visible = true
+	$FallingMan2.visible = true
 	
 	get_node("RunningDog").play("Running")
 	get_node("FallingMan2").play("Falling")
