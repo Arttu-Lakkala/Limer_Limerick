@@ -22,6 +22,8 @@ global="*res://global.gd"
 
 [display]
 
+window/size/viewport_width=1181
+window/size/viewport_height=950
 window/size/resizable=false
 window/vsync/vsync_mode=0
 window/max_fps=0
