@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvi4mdaw2f52k"
-path="res://.godot/imported/Man-MODIFIED-Animation1.png-41e0fd5f1376e3a0dd39182a381b78e4.ctex"
+uid="uid://dvymvv0w4oktg"
+path="res://.godot/imported/Tree-Dog-Animation1.png-1334341069706ecab448750e96e5b34f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cutouts/Man-MODIFIED-Animation1.png"
-dest_files=["res://.godot/imported/Man-MODIFIED-Animation1.png-41e0fd5f1376e3a0dd39182a381b78e4.ctex"]
+source_file="res://Scenes/Tree-Dog-Animation1.png"
+dest_files=["res://.godot/imported/Tree-Dog-Animation1.png-1334341069706ecab448750e96e5b34f.ctex"]
 
 [params]
 

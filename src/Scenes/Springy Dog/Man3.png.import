@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvgmq6k2cau3u"
-path="res://.godot/imported/Man-MODIFIED.png-59087f8862a9f0dee8aaae00aa3d81c5.ctex"
+uid="uid://cc25h45j5uvj2"
+path="res://.godot/imported/Man3.png-9959c15aff559383d9321be658c03f26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cutouts/Man-MODIFIED.png"
-dest_files=["res://.godot/imported/Man-MODIFIED.png-59087f8862a9f0dee8aaae00aa3d81c5.ctex"]
+source_file="res://Scenes/Springy Dog/Man3.png"
+dest_files=["res://.godot/imported/Man3.png-9959c15aff559383d9321be658c03f26.ctex"]
 
 [params]
 

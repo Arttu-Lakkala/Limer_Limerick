@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvymvv0w4oktg"
-path="res://.godot/imported/Tree-Dog-Animation1.png-eb08acf5fccb46a85abf910a87942f70.ctex"
+uid="uid://bmfcxftdvv58f"
+path="res://.godot/imported/Dog-CUT.png-a29db75dd353d5c58e81a150da6a2e9f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cutouts/Tree-Dog-Animation1.png"
-dest_files=["res://.godot/imported/Tree-Dog-Animation1.png-eb08acf5fccb46a85abf910a87942f70.ctex"]
+source_file="res://Scenes/Springy Dog/Dog-CUT.png"
+dest_files=["res://.godot/imported/Dog-CUT.png-a29db75dd353d5c58e81a150da6a2e9f.ctex"]
 
 [params]
 

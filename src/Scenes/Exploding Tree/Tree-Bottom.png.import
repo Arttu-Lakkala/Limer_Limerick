@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6u2r58oapg5y"
-path="res://.godot/imported/Rope.png-dc99a05da720168946f0376468a61d52.ctex"
+uid="uid://dvpcruhcx8uo2"
+path="res://.godot/imported/Tree-Bottom.png-07143f433a849e2331a9f2249e6f4b8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cutouts/Rope.png"
-dest_files=["res://.godot/imported/Rope.png-dc99a05da720168946f0376468a61d52.ctex"]
+source_file="res://Scenes/Exploding Tree/Tree-Bottom.png"
+dest_files=["res://.godot/imported/Tree-Bottom.png-07143f433a849e2331a9f2249e6f4b8c.ctex"]
 
 [params]
 
