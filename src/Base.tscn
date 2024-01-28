@@ -72,3 +72,5 @@ texture = ExtResource("3_lyrlw")
 [node name="Error_audio" type="AudioStreamPlayer" parent="."]
 
 [node name="Point_audio" type="AudioStreamPlayer" parent="."]
+
+[node name="ScrollAnimation" type="AnimationPlayer" parent="."]
