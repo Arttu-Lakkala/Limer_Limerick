@@ -4,6 +4,7 @@ extends Node2D
 func _ready():
 	# These two would be visible while choosing the word - and the true would turn to false when the correct choice is made.
 	$IdleMan.visible = true
+	get_node("AudioManager").get_node("IdleBarkBird").play()
 	global.level = 0
 	_play_animation()
 
@@ -15,6 +16,7 @@ func _play_animation():
 			
 			$FallingMan.visible = true
 			$TreeDog.visible = true
+			get_node("AudioManager").get_node("Run").play()
 			get_node("FallingMan").play("Fall")
 			get_node("TreeDog").play("Run")
 			get_node("FallingManAnimation").play("Man-falls")
@@ -26,6 +28,8 @@ func _play_animation():
 			$Treebottom.visible = true
 			$RunningDog.visible = true
 			$FallingMan2.visible = true
+			get_node("AudioManager").get_node("Run").play()
+			get_node("AudioManager").get_node("BreakingWood").play()
 			get_node("RunningDog").play("Running")
 			get_node("FallingMan2").play("Falling")
 			get_node("FallingMan2Animation").play("Exploding Tree")
@@ -43,6 +47,7 @@ func _play_animation():
 			$Tree.visible = false
 		3:
 			$IntactTree.visible = true
+			get_node("AudioManager").get_node("Boing").play()
 			get_node("IntactTree/SpringyMan").play("Spring")
 			get_node("IntactTree/SpringyDog").play("SpringDog")
 			get_node("SpringyManAnimation").play("Springy-Man")

@@ -611,13 +611,11 @@ position = Vector2(-420, 70)
 texture = ExtResource("11_djxx4")
 
 [node name="Tree-Top-Left" type="Sprite2D" parent="Treebottom"]
-position = Vector2(-934.267, -738.133)
-rotation = -6.28319
+position = Vector2(-65, -336)
 texture = ExtResource("12_rte3o")
 
 [node name="Tree-Top-Right" type="Sprite2D" parent="Treebottom"]
-position = Vector2(612.429, -266)
-rotation = 4.53786
+position = Vector2(146, -331)
 texture = ExtResource("13_75kxo")
 
 [node name="Rope" type="Sprite2D" parent="Treebottom"]
@@ -626,8 +624,7 @@ texture = ExtResource("14_3sfv0")
 
 [node name="FallingMan2" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(-137.609, 126.261)
-rotation = -2.72271
+position = Vector2(-375, -110)
 sprite_frames = SubResource("SpriteFrames_hh5t7")
 animation = &"Falling"
 
@@ -652,8 +649,7 @@ sprite_frames = SubResource("SpriteFrames_rlcjy")
 animation = &"Fall3"
 
 [node name="ClimbingDog" type="AnimatedSprite2D" parent="Tree"]
-position = Vector2(-188.444, 329)
-rotation = -0.761599
+position = Vector2(-24, 329)
 sprite_frames = SubResource("SpriteFrames_17cjn")
 animation = &"Climb"
 
@@ -674,12 +670,11 @@ texture = ExtResource("4_sburi")
 
 [node name="SpringyMan" type="AnimatedSprite2D" parent="IntactTree"]
 position = Vector2(-33, -43)
-rotation = 1.63363
 sprite_frames = SubResource("SpriteFrames_82nf5")
 animation = &"Spring"
 
 [node name="SpringyDog" type="AnimatedSprite2D" parent="IntactTree"]
-position = Vector2(351.1, 316.267)
+position = Vector2(-22, 331)
 sprite_frames = SubResource("SpriteFrames_cjqic")
 animation = &"SpringDog"
 autoplay = "SpringDog"
