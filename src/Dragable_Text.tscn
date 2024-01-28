@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhugafu22k36w"]
+[gd_scene load_steps=5 format=3 uid="uid://bhugafu22k36w"]
 
 [ext_resource type="Script" path="res://Dragable_Text.gd" id="1_q3j4t"]
-[ext_resource type="FontFile" uid="uid://b8ilcd8whjgnq" path="res://fonts/roboto/Roboto-Medium.ttf" id="2_tj5x4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m3q3o"]
 size = Vector2(90.7648, 39.1842)
@@ -22,7 +21,6 @@ corner_radius_bottom_left = 40
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_q3j4t")
-easy_font = ExtResource("2_tj5x4")
 
 [node name="Area2D" type="Area2D" parent="."]
 
