@@ -40,6 +40,7 @@ func _play_animation():
 			$FallingMan2.visible = false
 		2:
 			$Tree.visible = true
+			get_node("AudioManager").get_node("ClimbingRustle").play()
 			get_node("Tree/FallingMan3").play("Fall3")
 			get_node("Tree/ClimbingDog").play("Climb")
 			get_node("ClimbingAnimation").play("ClimbingUp")
