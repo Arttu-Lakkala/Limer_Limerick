@@ -25,7 +25,7 @@ position = Vector2(-480, -256)
 scale = Vector2(1.51961, 1.62941)
 texture = ExtResource("4_4mpaf")
 
-[node name="Sprite2D" type="Sprite2D" parent="StartScreen"]
+[node name="Jean" type="Sprite2D" parent="StartScreen"]
 position = Vector2(480, -256)
 scale = Vector2(1.46569, 1.61471)
 texture = ExtResource("3_sdcgo")
