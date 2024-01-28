@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="GAMEJAM_2024"
+config/name="Limer Limerick"
 run/main_scene="res://Menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 run/max_fps=300
