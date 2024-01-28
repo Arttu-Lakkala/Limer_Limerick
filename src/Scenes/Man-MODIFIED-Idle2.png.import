@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkcv4qryog3lk"
-path="res://.godot/imported/Background(maybe).png-58c2ceed2cc48907c2b0881d39d4dd3a.ctex"
+uid="uid://d2xmldgcf6rwl"
+path="res://.godot/imported/Man-MODIFIED-Idle2.png-934237612096f10d1528d9a2fcdbbc3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Background(maybe).png"
-dest_files=["res://.godot/imported/Background(maybe).png-58c2ceed2cc48907c2b0881d39d4dd3a.ctex"]
+source_file="res://Scenes/Man-MODIFIED-Idle2.png"
+dest_files=["res://.godot/imported/Man-MODIFIED-Idle2.png-934237612096f10d1528d9a2fcdbbc3a.ctex"]
 
 [params]
 

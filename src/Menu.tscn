@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3hekhwgywgrj"]
+[gd_scene load_steps=6 format=3 uid="uid://d3hekhwgywgrj"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_fgv2f"]
 [ext_resource type="Texture2D" uid="uid://bjxm34i27ifjw" path="res://Scenes/StartScreen.png" id="1_jo1g8"]
 [ext_resource type="Texture2D" uid="uid://xqfkuccsvpk3" path="res://Scenes/Man-Head-Portrait.png" id="3_sdcgo"]
 [ext_resource type="Texture2D" uid="uid://de50q0c72gp2y" path="res://Scenes/Dog-Head-Portrait.png" id="4_4mpaf"]
+[ext_resource type="FontFile" uid="uid://dmiv5tp8fxrq3" path="res://fonts/mael/Mael.ttf" id="5_vbai8"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -35,10 +36,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -99.5
-offset_top = -55.0
-offset_right = 159.5
-offset_bottom = 25.0
+offset_left = -126.5
+offset_top = -49.0
+offset_right = 132.5
+offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
@@ -52,10 +53,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -99.5
-offset_top = 44.0
-offset_right = 159.5
-offset_bottom = 128.0
+offset_left = -127.5
+offset_top = 50.0
+offset_right = 131.5
+offset_bottom = 134.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
@@ -63,12 +64,25 @@ text = "Quit"
 
 [node name="Credits Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 491.0
-offset_top = 622.0
-offset_right = 750.0
-offset_bottom = 711.0
+offset_left = 461.0
+offset_top = 630.0
+offset_right = 720.0
+offset_bottom = 719.0
 theme_override_font_sizes/font_size = 50
 text = "Credits"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 105.0
+offset_right = 958.0
+offset_bottom = 424.0
+theme_override_colors/font_color = Color(0.0862745, 0.0862745, 0.0862745, 1)
+theme_override_fonts/font = ExtResource("5_vbai8")
+theme_override_font_sizes/font_size = 120
+text = "Limer
+Limerick"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]
