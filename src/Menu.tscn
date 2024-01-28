@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3hekhwgywgrj"]
+[gd_scene load_steps=8 format=3 uid="uid://d3hekhwgywgrj"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_fgv2f"]
 [ext_resource type="Texture2D" uid="uid://bjxm34i27ifjw" path="res://Scenes/StartScreen.png" id="1_jo1g8"]
+[ext_resource type="FontFile" uid="uid://b8ilcd8whjgnq" path="res://fonts/roboto/Roboto-Medium.ttf" id="2_vyk2c"]
 [ext_resource type="Texture2D" uid="uid://xqfkuccsvpk3" path="res://Scenes/Man-Head-Portrait.png" id="3_sdcgo"]
 [ext_resource type="Texture2D" uid="uid://de50q0c72gp2y" path="res://Scenes/Dog-Head-Portrait.png" id="4_4mpaf"]
 [ext_resource type="FontFile" uid="uid://dmiv5tp8fxrq3" path="res://fonts/mael/Mael.ttf" id="5_vbai8"]
@@ -15,6 +16,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fgv2f")
+easy_font = ExtResource("2_vyk2c")
 
 [node name="StartScreen" type="Sprite2D" parent="."]
 position = Vector2(590, 430)

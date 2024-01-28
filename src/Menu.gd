@@ -1,9 +1,13 @@
 extends Control
 
-
+var easy_theme = Theme.new()
+@export var easy_font: Font
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if global.simple_font:
+		easy_theme.set_default_font(easy_font)
+		easy_theme.set_default_font_size(13)
+		set_theme(easy_theme)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
