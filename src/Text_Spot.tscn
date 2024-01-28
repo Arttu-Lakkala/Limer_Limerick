@@ -21,6 +21,7 @@ offset_right = 299.68
 offset_bottom = 57.5309
 rotation = -2.31066
 scale = Vector2(0.136443, 0.352278)
+color = Color(0, 0, 0, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="."]
 offset_left = 256.68
@@ -29,6 +30,7 @@ offset_right = 296.68
 offset_bottom = 53.5309
 rotation = -0.745728
 scale = Vector2(0.104589, 0.351095)
+color = Color(0, 0, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = 259.68
@@ -36,3 +38,4 @@ offset_top = 11.5309
 offset_right = 282.68
 offset_bottom = 17.5309
 rotation = -0.00237636
+color = Color(0.00784314, 0.00784314, 0.00784314, 1)
