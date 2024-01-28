@@ -699,3 +699,5 @@ autoplay = "Springy-Dog"
 [node name="Text" parent="." instance=ExtResource("32_nlgjp")]
 position = Vector2(-65, -225)
 scale = Vector2(1.6, 1.6)
+
+[connection signal="win" from="Text" to="." method="_on_text_win"]

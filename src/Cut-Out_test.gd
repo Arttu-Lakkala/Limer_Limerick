@@ -5,12 +5,9 @@ func _ready():
 	# These two would be visible while choosing the word - and the true would turn to false when the correct choice is made.
 	$IdleMan.visible = true
 	get_node("AudioManager").get_node("IdleBarkBird").play()
-	global.level = 0
-	_play_animation()
 
 func _play_animation():
 	$IdleMan.visible = false
-	print_debug("here")
 	match global.level:
 		0:
 			
@@ -58,3 +55,7 @@ func _play_animation():
 			
 	$IdleMan.visible = true
 	
+
+
+func _on_text_win():
+	_play_animation()
