@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://dlpukwswtlja1"
-path="res://.godot/imported/NHU05002129.wav-e4c563b0a0db6e89a673a9c98c198182.sample"
+uid="uid://bm2fjxdh5yii4"
+path="res://.godot/imported/Man_laughs.wav-d81ae2f898b5017e83024c836a0c40e9.sample"
 
 [deps]
 
-source_file="res://Audio/NHU05002129.wav"
-dest_files=["res://.godot/imported/NHU05002129.wav-e4c563b0a0db6e89a673a9c98c198182.sample"]
+source_file="res://Audio/Man_laughs.wav"
+dest_files=["res://.godot/imported/Man_laughs.wav-d81ae2f898b5017e83024c836a0c40e9.sample"]
 
 [params]
 

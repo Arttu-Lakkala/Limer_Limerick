@@ -31,7 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://cc25h45j5uvj2" path="res://Scenes/Springy Dog/Man3.png" id="25_45hct"]
 [ext_resource type="Texture2D" uid="uid://b7y0hxwyw4cwr" path="res://Scenes/Springy Dog/Man2.png" id="26_ucnr0"]
 [ext_resource type="PackedScene" uid="uid://bnnfi0s5h1bv0" path="res://audio_manager.tscn" id="31_4qmvo"]
-[ext_resource type="PackedScene" uid="uid://catpcugp6qf5g" path="res://base.tscn" id="32_nlgjp"]
+[ext_resource type="PackedScene" uid="uid://catpcugp6qf5g" path="res://Base.tscn" id="32_nlgjp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r3cej"]
 animations = [{
