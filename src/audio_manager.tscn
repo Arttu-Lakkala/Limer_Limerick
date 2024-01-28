@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bnnfi0s5h1bv0"]
+[gd_scene load_steps=2 format=3 uid="uid://bnnfi0s5h1bv0"]
+
+[ext_resource type="AudioStream" uid="uid://bvcujoqkvcccj" path="res://Audio/fanfarebirds.wav" id="1_c5vdw"]
 
 [node name="AudioManager" type="Node"]
 
@@ -6,4 +8,5 @@
 
 [node name="Laughter" type="AudioStreamPlayer" parent="."]
 
-[node name="BirdBark" type="AudioStreamPlayer" parent="."]
+[node name="MainGameStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_c5vdw")
