@@ -104,6 +104,7 @@ func _next_verse(answer):
 		await get_tree().create_timer(3).timeout
 		global.level += 1
 		if global.level == 4:
+			global.level = 0
 			get_tree().change_scene_to_file("res://Credits.tscn")
 		else:
 			_ready()
