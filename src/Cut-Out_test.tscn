@@ -263,7 +263,7 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_mutgj"]
 resource_name = "Exploding Tree"
-length = 6.0
+length = 4.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -595,7 +595,7 @@ libraries = {
 
 [node name="RunningDog" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(-369, 260)
+position = Vector2(249.28, 260)
 sprite_frames = SubResource("SpriteFrames_ahot2")
 animation = &"Running"
 
@@ -611,11 +611,13 @@ position = Vector2(-420, 70)
 texture = ExtResource("11_djxx4")
 
 [node name="Tree-Top-Left" type="Sprite2D" parent="Treebottom"]
-position = Vector2(-65, -336)
+position = Vector2(-934.267, -738.133)
+rotation = -6.28319
 texture = ExtResource("12_rte3o")
 
 [node name="Tree-Top-Right" type="Sprite2D" parent="Treebottom"]
-position = Vector2(146, -331)
+position = Vector2(612.429, -266)
+rotation = 4.53786
 texture = ExtResource("13_75kxo")
 
 [node name="Rope" type="Sprite2D" parent="Treebottom"]
@@ -624,7 +626,8 @@ texture = ExtResource("14_3sfv0")
 
 [node name="FallingMan2" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(-375, -110)
+position = Vector2(-137.609, 126.261)
+rotation = -2.72271
 sprite_frames = SubResource("SpriteFrames_hh5t7")
 animation = &"Falling"
 
@@ -649,7 +652,8 @@ sprite_frames = SubResource("SpriteFrames_rlcjy")
 animation = &"Fall3"
 
 [node name="ClimbingDog" type="AnimatedSprite2D" parent="Tree"]
-position = Vector2(-24, 329)
+position = Vector2(-188.444, 329)
+rotation = -0.761599
 sprite_frames = SubResource("SpriteFrames_17cjn")
 animation = &"Climb"
 
@@ -675,7 +679,7 @@ sprite_frames = SubResource("SpriteFrames_82nf5")
 animation = &"Spring"
 
 [node name="SpringyDog" type="AnimatedSprite2D" parent="IntactTree"]
-position = Vector2(-22, 331)
+position = Vector2(351.1, 316.267)
 sprite_frames = SubResource("SpriteFrames_cjqic")
 animation = &"SpringDog"
 autoplay = "SpringDog"
