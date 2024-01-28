@@ -17,6 +17,7 @@ var last_visible
 signal win
 	
 func _ready():
+	get_node("ScrollAnimation").play("Scroll_Animation")
 	texts.clear()
 	spots.clear()
 	solved = -1
@@ -89,6 +90,7 @@ func _adjust_verse(answer):
 				hide = true
 
 func _next_verse(answer):
+	$ScrollAnimation.play("start_loop")
 	solved +=1
 	_adjust_verse(answer)
 	_destroy_options()
