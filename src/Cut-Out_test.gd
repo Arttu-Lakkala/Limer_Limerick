@@ -16,6 +16,7 @@ func _play_animation():
 			
 			$FallingMan.visible = true
 			$TreeDog.visible = true
+			get_node("AudioManager").get_node("Run").play()
 			get_node("FallingMan").play("Fall")
 			get_node("TreeDog").play("Run")
 			get_node("FallingManAnimation").play("Man-falls")
@@ -27,6 +28,8 @@ func _play_animation():
 			$Treebottom.visible = true
 			$RunningDog.visible = true
 			$FallingMan2.visible = true
+			get_node("AudioManager").get_node("Run").play()
+			get_node("AudioManager").get_node("BreakingWood").play()
 			get_node("RunningDog").play("Running")
 			get_node("FallingMan2").play("Falling")
 			get_node("FallingMan2Animation").play("Exploding Tree")
