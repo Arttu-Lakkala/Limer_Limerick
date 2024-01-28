@@ -8,6 +8,7 @@ func _ready():
 		easy_theme.set_default_font(easy_font)
 		easy_theme.set_default_font_size(13)
 		set_theme(easy_theme)
+		get_node("Option_Button").text ="Off"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,3 +29,12 @@ func _on_credits_button_pressed():
 
 func _on_back_button_pressed():
 	get_tree().change_scene_to_file("res://Menu.tscn")
+
+
+func _on_option_button_pressed():
+	if global.simple_font:
+		global.simple_font = false
+	else:	
+		get_node("Option_Button").text ="Off"
+		global.simple_font = true
+	get_tree().reload_current_scene()
