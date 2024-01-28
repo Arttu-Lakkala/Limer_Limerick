@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bnnfi0s5h1bv0"]
+
+[node name="AudioManager" type="Node"]
+
+[node name="FallFart" type="AudioStreamPlayer" parent="."]
+
+[node name="Laughter" type="AudioStreamPlayer" parent="."]
+
+[node name="BirdBark" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
