@@ -566,7 +566,8 @@ texture = ExtResource("4_sburi")
 
 [node name="FallingMan" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(-374, -111)
+position = Vector2(-374, 86)
+rotation = -3.44144
 sprite_frames = SubResource("SpriteFrames_ptsib")
 animation = &"Fall"
 
