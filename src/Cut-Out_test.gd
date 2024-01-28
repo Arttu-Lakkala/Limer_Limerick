@@ -4,7 +4,8 @@ extends Node2D
 func _ready():
 	# These two would be visible while choosing the word - and the true would turn to false when the correct choice is made.
 	$IdleMan.visible = true
-
+	global.level = 0
+	_play_animation()
 
 func _play_animation():
 	$IdleMan.visible = false
