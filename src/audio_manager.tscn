@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnnfi0s5h1bv0"]
+[gd_scene load_steps=9 format=3 uid="uid://bnnfi0s5h1bv0"]
 
 [ext_resource type="AudioStream" uid="uid://qwo2kgwrtieo" path="res://Audio/Uh_oh_nope.wav" id="1_47l26"]
 [ext_resource type="AudioStream" uid="uid://bvcujoqkvcccj" path="res://Audio/fanfarebirds.wav" id="1_c5vdw"]
 [ext_resource type="AudioStream" uid="uid://dlpukwswtlja1" path="res://Audio/NHU05002129.wav" id="2_dubn6"]
 [ext_resource type="AudioStream" uid="uid://bwuoqlewlmtlj" path="res://Audio/idle-bark-bird.wav" id="4_s161b"]
+[ext_resource type="AudioStream" uid="uid://vfddfix2ts1" path="res://Audio/stick-breaking-44575.wav" id="5_qhqmb"]
+[ext_resource type="AudioStream" uid="uid://dlhb4ng81gphd" path="res://Audio/Run.wav" id="6_i7bd1"]
+[ext_resource type="AudioStream" uid="uid://be325vjorq48i" path="res://Audio/boing_sounds-35923.wav" id="7_g4nrn"]
+[ext_resource type="AudioStream" uid="uid://dqlk3qb5magbe" path="res://Audio/rustling-leaves-6875.wav" id="8_qiq0w"]
 
 [node name="AudioManager" type="Node"]
 
@@ -20,3 +24,15 @@ stream = ExtResource("1_c5vdw")
 
 [node name="IdleBarkBird" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_s161b")
+
+[node name="BreakingWood" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qhqmb")
+
+[node name="Run" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_i7bd1")
+
+[node name="Boing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_g4nrn")
+
+[node name="ClimbingRustle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qiq0w")
