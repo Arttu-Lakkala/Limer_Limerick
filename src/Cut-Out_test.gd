@@ -51,7 +51,7 @@ func _play_animation():
 			get_node("IntactTree/SpringyMan").play("Spring")
 			get_node("IntactTree/SpringyDog").play("SpringDog")
 			get_node("SpringyManAnimation").play("Springy-Man")
-			get_node("TreeDogAnimation").play("Springy-Dog")
+			get_node("SpringyDogAnimation").play("Springy-Dog")
 			await $ClimbingAnimation.animation_finished
 			$IntactTree.visible = false
 			
