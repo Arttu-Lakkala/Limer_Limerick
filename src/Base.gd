@@ -38,6 +38,7 @@ func _ready():
 			new_spot.position = line.position
 			add_child(new_spot)
 			new_spot.name = ("spot" +str(verse))
+			new_spot.active = false
 			spots.append(new_spot)
 			verse +=1
 	solved +=1
@@ -60,7 +61,6 @@ func _create_options ():
 		new_text.wrong_answer.connect(_notify_mistake)
 		add_child(new_text)
 		counter +=1
-		print_debug(i)
 		texts.append(new_text)
 		
 #DESTRoy options and hide all locations
@@ -71,7 +71,7 @@ func _destroy_options():
 	for spot in spots:
 		spot.active = false
 		spot.get_node("CollisionShape2D").set_disabled(true)
-	
+
 func _adjust_verse(answer):
 	if(last_visible != 0):
 		lines[last_visible] = lines[last_visible].replace("___",answer)
@@ -91,8 +91,10 @@ func _adjust_verse(answer):
 				last_visible = i
 				hide = true
 
+
 func _next_verse(answer):
-	$ScrollAnimation.play("start_loop")
+	var active_spot = get_node("spot" +str(solved))
+	active_spot.active = false
 	solved +=1
 	_adjust_verse(answer)
 	_destroy_options()
@@ -100,8 +102,7 @@ func _next_verse(answer):
 		win.emit()
 		global.level += 1
 		if global.level == 4:
-			#Win
-			pass
+			get_tree().change_scene_to_file("res://Credits.tscn")
 		else:
 			_ready()
 	else:
