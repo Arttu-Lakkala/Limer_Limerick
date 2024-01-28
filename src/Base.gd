@@ -43,7 +43,6 @@ func _ready():
 	solved +=1
 	_create_options()
 	_adjust_verse("null")
-	print_debug(global.level)
 
 func _create_options ():
 	var options =Array(lines[solved+5].split(","))
@@ -78,9 +77,12 @@ func _adjust_verse(answer):
 		lines[last_visible] = lines[last_visible].replace("___",answer)
 	var hide = false
 	for i in lines_n:
-		print_debug(lines[i])
 		var line = find_child(("Line_" + str(i)))
-		line.text = lines[i]
+		if global.simple_font:
+			line.text = "[b]" +lines[i] + "[/b]"
+			line.push_font_size(24)
+		else:
+			line.text = lines[i]
 		if hide:
 			line.visible = false
 		else:

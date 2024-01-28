@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://catpcugp6qf5g"]
+[gd_scene load_steps=8 format=3 uid="uid://catpcugp6qf5g"]
 
 [ext_resource type="Script" path="res://Base.gd" id="1_fs8d8"]
 [ext_resource type="Texture2D" uid="uid://dvbo51145avud" path="res://Art/paper.png" id="2_e7nqt"]
+[ext_resource type="FontFile" uid="uid://b8ilcd8whjgnq" path="res://fonts/roboto/Roboto-Medium.ttf" id="3_3thu0"]
 [ext_resource type="Texture2D" uid="uid://3y10deei8q0e" path="res://Art/upper.png" id="3_lyrlw"]
 [ext_resource type="Texture2D" uid="uid://cu2roeg5e67l0" path="res://Art/lower.png" id="4_qj3q7"]
 
@@ -77,6 +78,9 @@ offset_top = 14.0
 offset_right = 308.0
 offset_bottom = 44.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/bold_font = ExtResource("3_3thu0")
+theme_override_font_sizes/bold_font_size = 13
+bbcode_enabled = true
 text = "sadsadsad"
 metadata/_edit_use_anchors_ = true
 
@@ -86,6 +90,9 @@ offset_top = 44.0
 offset_right = 308.0
 offset_bottom = 74.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/bold_font = ExtResource("3_3thu0")
+theme_override_font_sizes/bold_font_size = 13
+bbcode_enabled = true
 text = "sadsadsad"
 metadata/_edit_use_anchors_ = true
 
@@ -95,6 +102,9 @@ offset_top = 74.0
 offset_right = 308.0
 offset_bottom = 104.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/bold_font = ExtResource("3_3thu0")
+theme_override_font_sizes/bold_font_size = 13
+bbcode_enabled = true
 text = "sadsadsad"
 metadata/_edit_use_anchors_ = true
 
@@ -104,7 +114,10 @@ offset_top = 104.0
 offset_right = 308.0
 offset_bottom = 134.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "sadsadsad"
+theme_override_fonts/bold_font = ExtResource("3_3thu0")
+theme_override_font_sizes/bold_font_size = 13
+bbcode_enabled = true
+text = "[b]sadsadsad"
 metadata/_edit_use_anchors_ = true
 
 [node name="Line_4" type="RichTextLabel" parent="."]
@@ -113,6 +126,9 @@ offset_top = 134.0
 offset_right = 308.0
 offset_bottom = 164.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/bold_font = ExtResource("3_3thu0")
+theme_override_font_sizes/bold_font_size = 13
+bbcode_enabled = true
 text = "sadsadsad"
 metadata/_edit_use_anchors_ = true
 

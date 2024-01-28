@@ -6,11 +6,16 @@ var body_ref
 var mouse_offset: Vector2
 var option
 var start_position =Vector2 (0.0, 0.0)
-
+var easy_theme = Theme.new()
 signal wrong_answer
 signal correct_answer
+@export var easy_font: Font
 # Called when the node enters the scene tree for the first time.
-	
+func _ready():
+	if global.simple_font:
+		easy_theme.set_default_font(easy_font)
+		easy_theme.set_default_font_size(13)
+		get_node("Content").set_theme(easy_theme)
 	
 func _set_Text(source):
 	get_node("Content").text = source
