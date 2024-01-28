@@ -22,7 +22,7 @@ func _play_animation():
 			await $TreeDogAnimation.animation_finished
 			$FallingMan.visible = false
 			$TreeDog.visible = false
-		1:
+		2:
 			$Treebottom.visible = true
 			$RunningDog.visible = true
 			$FallingMan2.visible = true
@@ -37,7 +37,7 @@ func _play_animation():
 			$Treebottom.visible = false
 			$RunningDog.visible = false
 			$FallingMan2.visible = false
-		2:
+		1:
 			$Tree.visible = true
 			get_node("AudioManager").get_node("ClimbingRustle").play()
 			get_node("Tree/FallingMan3").play("Fall3")
