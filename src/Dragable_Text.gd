@@ -34,12 +34,9 @@ func _process(_delta):
 		elif Input.is_action_just_released("click"):
 			global.is_draging = false
 			if is_inside_spot:
-				var mover = get_tree().create_tween()
-				mover.tween_property(self, "position", body_ref.position, 0.2).set_ease(Tween.EASE_OUT)
 				_check_answer(body_ref.answer)
-			else:
-				var mover = get_tree().create_tween()
-				mover.tween_property(self, "position", start_position, 0.2).set_ease(Tween.EASE_OUT)
+			var mover = get_tree().create_tween()
+			mover.tween_property(self, "position", start_position, 0.2).set_ease(Tween.EASE_OUT)
 
 func _on_area_2d_mouse_entered():
 	if not global.is_draging:
@@ -65,12 +62,9 @@ func _on_area_2d_body_exited(body):
 		body_ref = body
 
 func _check_answer(answer):
-	
 	if (answer == option):
-		print_debug("YAY")
 		correct_answer.emit(answer)
 	else:
-		print_debug("BOO")
 		wrong_answer.emit()
 		
 		

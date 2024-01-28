@@ -1,5 +1,5 @@
 extends Node2D
-@export_file var limeric_file
+var limeric_file
 
 var spot = preload("res://Text_Spot.tscn")
 var text_drag = preload("res://Dragable_Text.tscn")
@@ -13,6 +13,8 @@ var texts = [Node]
 var spots = [Node]
 #indicates last visible line of the poem
 var last_visible
+
+signal win
 	
 func _ready():
 	texts.clear()
@@ -20,6 +22,7 @@ func _ready():
 	solved = -1
 	last_visible = 0
 	verse = 0
+	var limeric_file = ("res://Limerick/Verse"+str(global.level+1)+".txt")
 	var file = FileAccess.open(limeric_file, FileAccess.READ)
 	var limeric = file.get_as_text()
 	lines = limeric.split("\n")
@@ -39,7 +42,7 @@ func _ready():
 	solved +=1
 	_create_options()
 	_adjust_verse("null")
-
+	print_debug(global.level)
 
 func _create_options ():
 	var options =Array(lines[solved+5].split(","))
@@ -54,6 +57,7 @@ func _create_options ():
 		new_text._set_Text(i)
 		new_text._set_spot(Vector2(100*counter,300.0))
 		new_text.correct_answer.connect(_next_verse)
+		new_text.wrong_answer.connect(_notify_mistake)
 		add_child(new_text)
 		counter +=1
 		print_debug(i)
@@ -89,11 +93,17 @@ func _next_verse(answer):
 	_adjust_verse(answer)
 	_destroy_options()
 	if solved == verse:
-		_reset("res://Limerick/Verse4.txt")
+		win.emit()
+		global.level += 1
+		if global.level == 4:
+			#Win
+			pass
+		else:
+			_ready()
 	else:
-		#Create new ones
+		$Point_audio.play()
 		_create_options()
+	
+func _notify_mistake():
+	$Error_audio.play()
 		
-func _reset(file):
-	limeric_file = file
-	_ready()

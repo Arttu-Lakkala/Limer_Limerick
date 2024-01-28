@@ -527,7 +527,7 @@ _data = {
 "Springy-Dog": SubResource("Animation_4qklc")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Cut-Out_test" type="Node2D"]
 script = ExtResource("1_12q80")
 
 [node name="Camera2D" type="Camera2D" parent="."]

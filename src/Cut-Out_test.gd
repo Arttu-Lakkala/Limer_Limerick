@@ -38,9 +38,20 @@ func _ready():
 	get_node("IntactTree/SpringyDog").play("SpringDog")
 	get_node("SpringyManAnimation").play("Springy-Man")
 	get_node("TreeDogAnimation").play("Springy-Dog")
-	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _play_animation():
+	$IdleMan.visible = false
+	match global.level:
+		0:
+			pass
+		1:
+			pass
+		2:
+			pass
+		3:
+			pass
+			
+			
+	$IdleMan.visible = true
+	

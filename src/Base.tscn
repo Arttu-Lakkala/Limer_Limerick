@@ -14,7 +14,6 @@ corner_radius_bottom_left = 30
 [node name="Text" type="Node2D"]
 position = Vector2(2, 1)
 script = ExtResource("1_fs8d8")
-limeric_file = "res://Limerick/Verse2.txt"
 
 [node name="Panel" type="Panel" parent="."]
 material = SubResource("CanvasItemMaterial_niimi")
@@ -67,3 +66,7 @@ offset_right = 308.0
 offset_bottom = 163.0
 text = "sadsadsad"
 metadata/_edit_use_anchors_ = true
+
+[node name="Error_audio" type="AudioStreamPlayer" parent="."]
+
+[node name="Point_audio" type="AudioStreamPlayer" parent="."]
