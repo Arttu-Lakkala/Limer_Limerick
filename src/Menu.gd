@@ -8,7 +8,8 @@ func _ready():
 		easy_theme.set_default_font(easy_font)
 		easy_theme.set_default_font_size(13)
 		set_theme(easy_theme)
-		get_node("Option_Button").text ="Off"
+		if self.name == "Menu2":
+			get_node("Option_Button").text ="Off"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
