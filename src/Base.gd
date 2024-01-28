@@ -18,7 +18,7 @@ signal win
 	
 func _ready():
 	get_node("ScrollAnimation").play("Scroll_Animation")
-	get_node("Scroll").play()
+	get_node("Scroll")	 .play()
 	texts.clear()
 	spots.clear()
 	solved = -1
