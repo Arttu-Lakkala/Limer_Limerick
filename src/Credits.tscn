@@ -68,7 +68,6 @@ Writing and narrative: Nevena Sicevic
 Thank you for playing!"
 horizontal_alignment = 1
 
-
 [node name="MarchSuccess" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_mnaik")
 autoplay = true
@@ -80,10 +79,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -94.5
+offset_top = 335.0
+offset_right = 6.5
+offset_bottom = 386.0
+grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.72, 1.52966)
 theme_override_font_sizes/font_size = 50
 text = "Back"
-
 expand_icon = true
 
 [connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
