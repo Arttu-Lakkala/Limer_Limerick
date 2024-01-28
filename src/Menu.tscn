@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://dmiv5tp8fxrq3" path="res://fonts/mael/Mael.ttf" id="5_vbai8"]
 [ext_resource type="AudioStream" uid="uid://bklcf1nalqfib" path="res://Audio/575585__gertraut_hecher__medieval-life-minstrels-and-jugglers.wav" id="6_4wxyi"]
 
-[node name="Menu" type="Control"]
+[node name="Menu2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,6 +47,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Start"
+expand_icon = true
+
+[node name="Option_Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -507.5
+offset_top = 61.0
+offset_right = -248.5
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "On"
 expand_icon = true
 
 [node name="Quit Button" type="Button" parent="."]
@@ -91,6 +108,19 @@ horizontal_alignment = 1
 stream = ExtResource("6_4wxyi")
 autoplay = true
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 452.0
+offset_right = 282.0
+offset_bottom = 527.0
+theme_override_fonts/font = ExtResource("2_vyk2c")
+theme_override_font_sizes/font_size = 30
+text = "Enhanced
+Readability"
+horizontal_alignment = 1
+
 [connection signal="pressed" from="Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Option_Button" to="." method="_on_option_button_pressed"]
 [connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="Credits Button" to="." method="_on_credits_button_pressed"]
