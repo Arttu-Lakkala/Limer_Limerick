@@ -100,6 +100,7 @@ func _next_verse(answer):
 	_destroy_options()
 	if solved == verse:
 		win.emit()
+		await get_tree().create_timer(3).timeout
 		global.level += 1
 		if global.level == 4:
 			get_tree().change_scene_to_file("res://Credits.tscn")
