@@ -669,7 +669,7 @@ texture = ExtResource("4_sburi")
 
 [node name="SpringyMan" type="AnimatedSprite2D" parent="IntactTree"]
 position = Vector2(-33, -43)
-rotation = 5.02655
+rotation = 1.63363
 sprite_frames = SubResource("SpriteFrames_82nf5")
 animation = &"Spring"
 

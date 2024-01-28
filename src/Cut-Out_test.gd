@@ -8,14 +8,17 @@ func _ready():
 
 func _play_animation():
 	$IdleMan.visible = false
+	print_debug("here")
 	match global.level:
 		0:
+			
 			$FallingMan.visible = true
 			$TreeDog.visible = true
 			get_node("FallingMan").play("Fall")
 			get_node("TreeDog").play("Run")
 			get_node("FallingManAnimation").play("Man-falls")
 			get_node("TreeDogAnimation").play("new_animation")
+			await $TreeDogAnimation.animation_finished
 			$FallingMan.visible = false
 			$TreeDog.visible = false
 		1:
@@ -26,6 +29,7 @@ func _play_animation():
 			get_node("FallingMan2").play("Falling")
 			get_node("FallingMan2Animation").play("Exploding Tree")
 			get_node("FullDogAnimation").play("RunningDogFull")
+			await $FallingMan2Animation.animation_finished
 			$Treebottom.visible = false
 			$RunningDog.visible = false
 			$FallingMan2.visible = false
@@ -34,6 +38,7 @@ func _play_animation():
 			get_node("Tree/FallingMan3").play("Fall3")
 			get_node("Tree/ClimbingDog").play("Climb")
 			get_node("ClimbingAnimation").play("ClimbingUp")
+			await $ClimbingAnimation.animation_finished
 			$Tree.visible = false
 		3:
 			$IntactTree.visible = true
@@ -41,6 +46,7 @@ func _play_animation():
 			get_node("IntactTree/SpringyDog").play("SpringDog")
 			get_node("SpringyManAnimation").play("Springy-Man")
 			get_node("TreeDogAnimation").play("Springy-Dog")
+			await $ClimbingAnimation.animation_finished
 			$IntactTree.visible = false
 			
 	$IdleMan.visible = true
