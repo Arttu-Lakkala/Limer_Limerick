@@ -7,7 +7,3 @@
 [node name="Laughter" type="AudioStreamPlayer" parent="."]
 
 [node name="BirdBark" type="AudioStreamPlayer" parent="."]
-
-[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="."]
-
-[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="."]
