@@ -47,6 +47,7 @@ func _play_animation():
 			$Tree.visible = false
 		3:
 			$IntactTree.visible = true
+			get_node("AudioManager").get_node("Boing").play()
 			get_node("IntactTree/SpringyMan").play("Spring")
 			get_node("IntactTree/SpringyDog").play("SpringDog")
 			get_node("SpringyManAnimation").play("Springy-Man")
