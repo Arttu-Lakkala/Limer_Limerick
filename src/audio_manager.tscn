@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnnfi0s5h1bv0"]
+[gd_scene load_steps=10 format=3 uid="uid://bnnfi0s5h1bv0"]
 
 [ext_resource type="AudioStream" uid="uid://qwo2kgwrtieo" path="res://Audio/Uh_oh_nope.wav" id="1_47l26"]
 [ext_resource type="AudioStream" uid="uid://bvcujoqkvcccj" path="res://Audio/fanfarebirds.wav" id="1_c5vdw"]
@@ -9,7 +9,6 @@
 [ext_resource type="AudioStream" uid="uid://be325vjorq48i" path="res://Audio/boing_sounds-35923.wav" id="7_g4nrn"]
 [ext_resource type="AudioStream" uid="uid://dqlk3qb5magbe" path="res://Audio/rustling-leaves-6875.wav" id="8_qiq0w"]
 [ext_resource type="AudioStream" uid="uid://mke2hgbiagll" path="res://Audio/vegan-fart-voice-043-12382.wav" id="10_rqvay"]
-[ext_resource type="AudioStream" uid="uid://dd55q8a7rnt40" path="res://Audio/office-paper-crumple-folding-handling-6413.wav" id="11_y46hc"]
 
 [node name="AudioManager" type="Node"]
 
@@ -40,5 +39,5 @@ stream = ExtResource("8_qiq0w")
 [node name="Fart" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_rqvay")
 
-[node name="Scroll" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_y46hc")
+[node name="Fanfare" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_c5vdw")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://catpcugp6qf5g"]
+[gd_scene load_steps=10 format=3 uid="uid://catpcugp6qf5g"]
 
 [ext_resource type="Script" path="res://Base.gd" id="1_fs8d8"]
 [ext_resource type="Texture2D" uid="uid://dvbo51145avud" path="res://Art/paper.png" id="2_e7nqt"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://3y10deei8q0e" path="res://Art/upper.png" id="3_lyrlw"]
 [ext_resource type="Texture2D" uid="uid://cu2roeg5e67l0" path="res://Art/lower.png" id="4_qj3q7"]
 [ext_resource type="AudioStream" uid="uid://qwo2kgwrtieo" path="res://Audio/Uh_oh_nope.wav" id="6_shxpo"]
+[ext_resource type="AudioStream" uid="uid://dd55q8a7rnt40" path="res://Audio/office-paper-crumple-folding-handling-6413.wav" id="7_x1dbf"]
 
 [sub_resource type="Animation" id="Animation_4ngdh"]
 resource_name = "Scroll_Animation"
@@ -154,3 +155,6 @@ stream = ExtResource("6_shxpo")
 volume_db = -10.306
 
 [node name="Point_audio" type="AudioStreamPlayer" parent="."]
+
+[node name="Scroll" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_x1dbf")
