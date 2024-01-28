@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dxi4c402ys0q"]
+[gd_scene load_steps=8 format=3 uid="uid://dxi4c402ys0q"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_ttwur"]
 [ext_resource type="Texture2D" uid="uid://bjxm34i27ifjw" path="res://Scenes/StartScreen.png" id="2_yrg63"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://xqfkuccsvpk3" path="res://Scenes/Man-Head-Portrait.png" id="4_y5lw0"]
 [ext_resource type="FontFile" uid="uid://dmiv5tp8fxrq3" path="res://fonts/mael/Mael.ttf" id="5_7hevn"]
 [ext_resource type="FontFile" uid="uid://b8ilcd8whjgnq" path="res://fonts/roboto/Roboto-Medium.ttf" id="6_i125c"]
+[ext_resource type="AudioStream" uid="uid://evpmm18f4jyq" path="res://Audio/505112__code_box__hunters-march.wav" id="7_mnaik"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -57,12 +58,16 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("6_i125c")
 theme_override_font_sizes/font_size = 30
-text = "Made during Global Game Jam 2024
+text = "Made during Global Game Jam 2024 in Tampere, Finland
 
-Coding: Arttu Lakala
+Coding: Arttu Lakkala
 Graphics: Benjamin Puha
 Audio: Krista Kanerva
 Writing and narrative: Nevena Sicevic
 
 Thank you for playing!"
 horizontal_alignment = 1
+
+[node name="MarchSuccess" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mnaik")
+autoplay = true
