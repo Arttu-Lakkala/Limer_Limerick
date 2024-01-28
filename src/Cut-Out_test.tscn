@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://bpau6r7nfoysx"]
+[gd_scene load_steps=58 format=3 uid="uid://bpau6r7nfoysx"]
 
 [ext_resource type="Texture2D" uid="uid://bkcv4qryog3lk" path="res://Scenes/Background(maybe).png" id="1_6iqxs"]
 [ext_resource type="Script" path="res://Cut-Out_test.gd" id="1_12q80"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://cc25h45j5uvj2" path="res://Scenes/Springy Dog/Man3.png" id="25_45hct"]
 [ext_resource type="Texture2D" uid="uid://b7y0hxwyw4cwr" path="res://Scenes/Springy Dog/Man2.png" id="26_ucnr0"]
 [ext_resource type="PackedScene" uid="uid://bnnfi0s5h1bv0" path="res://audio_manager.tscn" id="31_4qmvo"]
+[ext_resource type="PackedScene" uid="uid://catpcugp6qf5g" path="res://base.tscn" id="32_nlgjp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r3cej"]
 animations = [{
@@ -694,3 +695,7 @@ libraries = {
 autoplay = "Springy-Dog"
 
 [node name="AudioManager" parent="." instance=ExtResource("31_4qmvo")]
+
+[node name="Text" parent="." instance=ExtResource("32_nlgjp")]
+position = Vector2(-65, -225)
+scale = Vector2(1.6, 1.6)

@@ -56,7 +56,7 @@ func _create_options ():
 	for i in options:
 		var new_text = text_drag.instantiate()
 		new_text._set_Text(i)
-		new_text._set_spot(Vector2(100*counter,300.0))
+		new_text._set_spot(Vector2(200-(150*counter),370.0))
 		new_text.correct_answer.connect(_next_verse)
 		new_text.wrong_answer.connect(_notify_mistake)
 		add_child(new_text)
